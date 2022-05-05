@@ -1,0 +1,3256 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Python Documentation</title>
+  <link rel="stylesheet" href="./python.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<nav id="navbar">
+  <header>Python Documentation</header>
+  <ul>
+    <li><a class="nav-link" href="#Basic Concepts">Basic Concepts</a></li>
+    <li><a class="nav-link" href="#Strings & Variables">Strings & Variables</a></li>
+    <li><a class="nav-link" href="#Control Structures">Control Structures</a></li>
+    <li><a class="nav-link" href="#Functions & Modules">Functions & Modules</a></li>
+    <li><a class="nav-link" href="#Exceptions & Files">Exceptions & Files</a></li>
+    <li><a class="nav-link" href="#More Types">More Types</a></li>
+    <li><a class="nav-link" href="#Functional Programming">Functional Programming</a></li>
+    <li><a class="nav-link" href="#OOP">OOP</a></li>
+    <li><a class="nav-link" href="#Regular Expressions">Regular Expressions</a></li>
+    <li><a class="nav-link" href="#Pythonicness & Packaging">Pythonicness & Packaging</a></li>
+  </ul>
+</nav>
+<main id="main-doc">
+  <!-- Basic Concepts  -->
+  <section class="main-section" id="Basic Concepts">
+    <header>Basic Concepts</header>
+    <article>
+      <p>
+        <strong>Welcome to Python</strong>
+        <br>
+        Python is a high-level programming language, with applications in numerous areas, including web programming, scripting, scientific computing, and artificial intelligence!
+
+        It is very popular and used by organizations such as Google, NASA, the CIA, and Disney.
+        In this course we will be learning Python version 3, which is the most recent major version of Python
+      </p>
+      <p>
+        <strong>Printing Text</strong>
+        <br>
+        Let's start off by creating a short program that displays "Hello world!".
+        In Python, we use the print statement to output text.
+        Note that the text should be enclosed into single or double quotes.
+        The print statement needs to be followed by parentheses, which enclose the output we want to generate.
+        <br>
+        For example:
+        <code>print('Hello world!')</code>
+        The print statement can also be used to output multiple lines of text.
+        <br>
+        For example:
+        <code>print('Hello world!')
+          print('Hello world!')
+          print('Spam and eggs...')</code>
+        Each print statement outputs text from a new line.
+        Python code often contains references to the comedy group Monty Python. This is why the words, "spam" and "eggs" are often used as placeholder variables in Python.
+      </p>
+      <p>
+        <strong>Simple Operations</strong>
+        <br>
+        Python has the capability of carrying out calculations.
+        Enter a calculation directly into the print statement:
+        <br>
+        For example:
+        <code>print(2 + 2)
+          print(5 + 4 - 3)</code>
+        The spaces around the plus and minus signs here are optional (the code would work without them), but they make it easier to read.
+
+        Python also carries out multiplication and division, using an asterisk * to indicate multiplication and a forward slash / to indicate division.
+        Use parentheses to determine which operations are performed first.
+        <br>
+        For example:
+        <code>print( 2 * (3 + 4) )
+          print( 10 / 2 )</code>
+        Using a single slash to divide numbers produces a decimal (or float, as it is called in programming). We'll have more about floats in the next lesson.
+      </p>
+      <p>
+        <strong>Floats</strong>
+        <br>
+        Floats are used in Python to represent numbers that aren't integers (whole numbers).
+        Some examples of numbers that are represented as floats are 0.5 and -7.8237591.
+        They can be created directly by entering a number with a decimal point, or by using operations such as division on integers.
+        <br>
+        For example:
+        <code>print( 3/4 )
+          print( 0.42 )</code>
+        Computers can't store floats perfectly accurately, in the same way that we can't write down the complete decimal expansion of 1/3 (0.3333333333333333...).
+        Keep this in mind, because it often leads to infuriating bugs!
+
+        As you saw previously, dividing any two integers produces a float.
+        A float is also produced by running an operation on two floats, or on a float and an integer
+        <br>
+        For example:
+        <code>print( 8 / 2 )
+          print( 6 * 7.0 )
+          print( 4 + 1.65 )</code>
+        A float can be added to an integer, because Python silently converts the integer to a float.
+      </p>
+      <p>
+        <strong>Exponentiation</strong>
+        <br>
+        Besides addition, subtraction, multiplication, and division, Python also supports exponentiation, which is the raising of one number to the power of another. This operation is performed using two asterisks.
+        <br>
+        For example:
+        <code>print(2**5)</code>
+        You can chain exponentiations together. In other words, you can rise a number to multiple powers. For example, 2**3**2.
+
+        You can also use floats in exponentiation.
+        For example, the following code will result in the square root of 9:
+        <br>
+        For example:
+        <code>print(9 ** (1 / 2) )</code>
+        Note that the result will be a float
+      </p>
+      <p>
+        <strong>Quotient</strong>
+        <br>
+        Floor division is done using two forward slashes and is used to determine the quotient of a division (the quantity produced by the division of two numbers).
+        <br>
+        For example:
+        <code>print( 20 // 6 )</code>
+        The code above will output 3, because 6 goes into 20 three times.
+        You can also use floor division on floats.
+        <strong>Remainder</strong>
+        <br>
+        The modulo operator is carried out with a percent symbol (%) and is used to get the remainder of a division.
+        <br>
+        For example:
+        <code>print(20 % 6)
+          print(1.25 % 0.5)</code>
+        All numerical operators can also be used with floats.
+      </p>
+    </article>
+  </section>
+  <!-- Strings & Variables  -->
+  <section class="main-section" id="Strings & Variables">
+    <header>Strings & Variables</header>
+    <article>
+      <p>
+        <strong>Strings</strong>
+        <br>
+        If you want to use text in Python, you have to use a string.
+        A string is created by entering text between two single or double quotation marks.
+        <br>
+        For example:
+        <code>print('Coding in Finance')
+          print("An investment in knowledge pays the best interest.")</code>
+        The delimiter (" or ') used for a string doesn't affect how it behaves in any way.
+        Backslash
+        Some characters can't be directly included in a string. For instance, double quotes can't be directly included in a double quote string; this would cause it to end prematurely.
+
+        Characters like these must be escaped by placing a backslash before them.
+        Double quotes only need to be escaped in double quote strings, and the same is true for single quote strings
+        <br>
+        For example:
+        <code>print('Brian\'s mother: He\'s not an angel. He\'s a very naughty boy!')</code>
+        Backslashes can also be used to escape tabs, arbitrary Unicode characters, and various other things that can't be reliably printed.
+      </p>
+      <p>
+        <strong>New lines</strong>
+        <br>
+        \n represents a new line.
+        It can be used in strings to create multi-line output:
+        <br>
+        For example:
+        <code>print('One\nTwo\nThree')</code>
+        Similarly, \t represents a tab.
+        <br>
+        <strong>New lines</strong>
+        Newlines will be automatically added for strings that are created using three quotes.
+        <br>
+        For example:
+        <code>print("""this
+          is a
+          multiline
+          text""")</code>
+        This makes it easier to format long, multi-line texts without the need to explicitly put \n for line breaks.
+      </p>
+      <p>
+        <strong>String Operations
+          Concatenation
+        </strong>
+        <br>
+        As with integers and floats, strings in Python can be added, using a process called concatenation, which can be done on any two strings.
+        <br>
+        For example:
+        <code>print("Spam" + 'eggs')</code>
+        Even if your strings contain numbers, they are still added as strings rather than integers.
+        <br>
+        For example:
+        <code>print("2" + "2")</code>
+        Adding a string to a number produces an error, as even though they might look similar, they are two different entities.
+        <br>
+        <strong>String Operations</strong>
+        Strings can also be multiplied by integers. This produces a repeated version of the original string. The order of the string and the integer doesn't matter, but the string usually comes first.
+        <br>
+        For example:
+        <code>print("spam" * 3)
+          print(4 * '2')</code>
+        Strings can't be multiplied by other strings. Strings also can't be multiplied by floats, even if the floats are whole numbers.
+      </p>
+      <p>
+        <strong>Variables</strong>
+        <br>
+        A variable allows you to store a value by assigning it to a name, which can be used to refer to the value later in the program.
+        For example, in game development, you would use a variable to store the points of the player.
+        To assign a variable, use one equals sign
+        <br>
+        For example:
+        <code>user = "James"</code>
+        In given example we assigned string "James" to user variable.
+        <br>
+        <strong>Variable Names</strong>
+        Certain restrictions apply in regard to the characters that may be used in Python variable names. The only characters that are allowed are letters, numbers, and underscores. Also, they can't start with numbers.
+        Not following these rules results in errors
+        <br>
+        For example:
+        <code>this_is_a_normal_name = 7
+          123abc = 7
+        </code>
+        Python is a case sensitive programming language. Thus, Lastname and lastname are two different variable names in Python.
+      </p>
+      <p>
+        <strong>Working with Variables</strong>
+        <br>
+        You can use variables to perform corresponding operations, just as you did with numbers and strings:
+        <br>
+        For example:
+        <code>x = 7
+          print(x)
+          print(x + 3)
+          print(x)</code>
+        As you can see, the variable stores its value throughout the program.
+        <br>
+        <strong>Working with Variables</strong>
+        <br>
+        Variables can be reassigned as many times as you want, in order to change their value.
+        In Python, variables don't have specific types, so you can assign a string to a variable, and later assign an integer to the same variable.
+        <br>
+        For example:
+        <code>x = 123.456
+          print(x)
+
+          x = "This is a string"
+          print(x + "!")
+        </code>
+        However, it is not good practice. To avoid mistakes, try to avoid overwriting the same variable with different data types.
+      </p>
+      <p>
+        <strong>Taking User Input
+          Input
+        </strong>
+        <br>
+        To get input from the user in Python, you can use the intuitively named input function.
+        For example, a game can ask for the user's name and age as input and use them in the game.
+
+        The input function prompts the user for input, and returns what they enter as a string (with the contents automatically escaped).
+        <br>
+        For example:
+        <code>x = input()
+          print(x)</code>
+        Even if the user enters a number as input, it is processed as a string.
+        <br>
+        <strong>Input</strong>
+        The input statement needs to be followed by parentheses.
+        You can provide a string to input() between the parentheses, producing a prompt message.
+        <br>
+        For example:
+        <code>name = input("Enter your name: ")
+          print("Hello, " + name)
+        </code>
+        The prompt message helps to clarify what input the program is asking for.
+      </p>
+      <p>
+        <strong>Working with Input
+          Input
+        </strong>
+        <br>
+        Let's assume we want to take the age of the user as input.
+        We know that the input() function returns a string.
+        To convert it to a number, we can use the int() function:
+        <br>
+        For example:
+        <code>age = int(input())
+          print(age) </code>
+        Similarly, in order to convert a number to a string, the str() function is used. This can be useful if you need to use a number in string concatenation.
+        <br>
+        For example:
+        <code>age = 42
+          print("His age is " + str(age)) </code>
+        You can convert to float using the float() function.
+        <br>
+        <strong>Input</strong>
+        You can use input() multiple times to take multiple user inputs.
+        <br>
+        For example:
+        <code>name = input()
+          age = input()
+
+          print(name + " is " + age)
+        </code>
+        When input() function executes, program flow stops until a user enters some value.
+      </p>
+      <p>
+        <strong>In-Place and Walrus Operators
+          In-Place Operators
+        </strong>
+        <br>
+        In-place operators allow you to write code like 'x = x + 3' more concisely, as 'x += 3'.
+        The same thing is possible with other operators such as -, *, / and % as well.
+        <br>
+        For example:
+        <code>x = 2
+          print(x)
+
+          x += 3
+          print(x)</code>
+        Tap Try It Yourself and try other in-place operators!
+        <br>
+        <strong>In-Place Operators</strong>
+        These operators can be used on types other than numbers, as well, such as strings
+        <br>
+        For example:
+        <code>x = "spam"
+          print(x)
+
+          x += "eggs"
+          print(x)
+        </code>
+        In-place operators can be used for any numerical operation (+, -, *, /, %, **, //).
+        <br>
+        <strong>Walrus operator</strong>
+        Walrus operator := allows you to assign values to variables within an expression, including variables that do not exist yet.
+        Let's suppose we want to take an integer from the user, assign it to a variable num and output it:
+        <br>
+        For example:
+        <code>num = int(input())
+          print(num)
+        </code>
+        The walrus operator accomplishes these operations at once:
+        <code>print(num:=int(input()))</code>
+        The walrus operator makes code more readable and can be useful in many situations.
+      </p>
+    </article>
+  </section>
+  <!-- Control Structures  -->
+  <section class="main-section" id="Control Structures">
+    <header>Control Structures</header>
+    <article>
+      <p>
+        <strong>Booleans & Comparisons
+          Booleans
+        </strong>
+        <br>
+        Another type in Python is the Boolean type. There are two Boolean values: True and False.
+        They can be created by comparing values, for instance by using the equal operator ==.
+        <br>
+        For example:
+        <code>my_boolean = True
+          print(my_boolean)
+
+          print(2 == 3)
+
+          print("hello" == "hello")
+        </code>
+        Be careful not to confuse assignment (one equals sign) with comparison (two equals signs).
+        <strong>Comparison</strong>
+        <br>
+        Another comparison operator, the not equal operator (!=), evaluates to True if the items being compared aren't equal, and False if they are.
+        <br>
+        For example:
+        <code>print(1 != 1)
+          print("eleven" != "seven")
+          print(2 != 10)
+        </code>
+        Comparison operators are also called Relational operators.
+
+        Python also has operators that determine whether one number (float or integer) is greater than or smaller than another. These operators are > and < respectively. <br>
+          For example:
+          <code>print(7 > 5)
+
+            print(10 < 10) </code>
+              Different numeric types can also be compared, for example, integer and float.
+              The greater than or equal to, and smaller than or equal to operators are >= and <=. They are the same as the strict greater than and smaller than operators, except that they return True when comparing equal numbers. <br>
+                For example:
+                <code>print(7 <= 8) print(9>= 9.0)
+                </code>
+                Greater than and smaller than operators can also be used to compare strings lexicographically (the alphabetical order of words is based on the alphabetical order of their component letters).
+                <br>
+                For example:
+                <code>
+                  print("Annie" > "Andy")
+                </code>
+                The first two characters from "Annie" and "Andy" (A and A) are compared. As they are equal, the second two characters are compared. Because they are also equal, the third two characters (n and d) are compared. And because n has greater alphabetical order value than d, "Annie" is greater than "Andy".
+      </p>
+      <p>
+        <strong>if Statements</strong>
+        <br>
+        You can use if statements to run code if a certain condition holds.
+        If an expression evaluates to True, some statements are carried out. Otherwise, they aren't carried out.
+        An if statement looks like this:
+        <br>
+        For example:
+        <code>if expression:
+          statement</code>
+        Python uses indentation (white space at the beginning of a line) to delimit blocks of code. Depending on program's logic, indentation can be mandatory. As you can see, the statements in the if should be indented.
+
+        Here is an example if statement:
+        <br>
+        For example:
+        <code>if 10 > 5:
+          print("10 greater than 5")
+          print("Program ended")</code>
+
+        The expression determines whether 10 is greater than 5. Since it is, the indented statement runs, and "10 greater than 5" is output. Then, the unindented statement, which is not part of the if statement, is run, and "Program ended" is displayed.
+        Notice the colon at the end of the expression in the if statement.
+
+        To perform more complex checks, if statements can be nested, one inside the other.
+        This means that the inner if statement is the statement part of the outer one. This is one way to see whether multiple conditions are satisfied.
+        <br>
+        For example:
+        <code>num = 12
+          if num > 5:
+          print("Bigger than 5")
+          if num <=47: print("Between 5 and 47")</code>
+            Indentation is used to define the level of nesting.
+      </p>
+      <p>
+        <strong>else Statements</strong>
+        <br>
+        The if statement allows you to check a condition and run some statements, if the condition is True.
+        The else statement can be used to run some statements when the condition of the if statement is False.
+
+        As with if statements, the code inside the block should be indented.
+        <br>
+        For example:
+        <code>x = 4
+          if x == 5:
+          print("Yes")
+          else:
+          print("No")</code>
+        Notice the colon after the else keyword.
+
+        Every if condition block can have only one else statement.
+        In order to make multiple checks, you can chain if and else statements.
+
+        For example, the following program checks and outputs the num variable's value as text:
+        <br>
+        For example:
+        <code>num = 3
+          if num == 1:
+          print("One")
+          else:
+          if num == 2:
+          print("Two")
+          else:
+          if num == 3:
+          print("Three")
+          else:
+          print("Something else")</code>
+
+        As you can see in the example above, a series of if elif statements can have a final else block, which is called if none of the if or elif expressions is True.
+        The elif statement is equivalent to an else/if statement. It is used to make the code shorter, more readable, and avoid indentation increase.
+      </p>
+      <p>
+        <strong>Boolean Logic</strong>
+        <br>
+        Boolean logic is used to make more complicated conditions for if statements that rely on more than one condition.
+        Python's Boolean operators are and, or, and not.
+        The and operator takes two arguments, and evaluates as True if, and only if, both of its arguments are True. Otherwise, it evaluates to False
+        <br>
+        For example:
+        <code>print(1 == 1 and 2 == 2)
+
+          print(1 == 1 and 2 == 3)
+
+          print(1 != 1 and 2 == 2)
+
+          print(2 < 1 and 3> 6)
+        </code>
+        Boolean operators can be used in expression as many times as needed.
+        <strong>Boolean Or</strong>
+        <br>
+        The or operator also takes two arguments. It evaluates to True if either (or both) of its arguments are True, and False if both arguments are False.
+        <br>
+        For example:
+        <code>print(1 == 1 or 2 == 2)
+
+          print(1 == 1 or 2 == 3)
+
+          print(1 != 1 or 2 == 2)
+
+          print(2 < 1 or 3> 6)
+        </code>
+        Besides values, you can also compare variables
+        <strong>Boolean Not</strong>
+        <br>
+        Unlike other operators we've seen so far, not only takes one argument, and inverts it.
+        The result of not True is False, and not False goes to True.
+        <br>
+        For example:
+        <code>print(not 1 == 1)
+          print(not 1 > 7)</code>
+        You can chain multiple conditional statements in an if statement using the Boolean operators.
+      </p>
+      <p>
+        <strong>Multiple Operators & Conditions
+          Operator Precedence
+        </strong>
+        <br>
+        Operator precedence is a very important concept in programming. It is an extension of the mathematical idea of order of operations (multiplication being performed before addition, etc.) to include other operators, such as those in Boolean logic.
+
+        The below code shows that == has a higher precedence than or
+        <br>
+        For example:
+        <code>print(False == False or True)
+
+          print(False == (False or True))
+
+          print((False == False) or True)</code>
+        Python's order of operations is the same as that of normal mathematics: parentheses first, then exponentiation, then multiplication/division, and then addition/subtraction.
+
+        <strong>Chaining Multiple Conditions</strong>
+        <br>
+        You can chain multiple conditional statements in an if statement using the Boolean operators.
+
+        For example, we can check if the value of a grade is between 70 and 100:
+        <br>
+        For example:
+        <code>grade = 88
+          if(grade >= 70 and grade <= 100): print("Passed!") </code>
+            You can use multiple and, or, not operators to chain multiple conditions together.
+      </p>
+      <p>
+        <strong>Lists</strong>
+        <br>
+        Lists are used to store items.
+        A list is created using square brackets with commas separating items.
+        <br>
+        For example:
+        <code>
+          words = ["Hello", "world", "!"]
+        </code>
+        In the example above the words list contains three string items.
+
+        A certain item in the list can be accessed by using its index in square brackets.
+        <br>
+        For example:
+        <code>words = ["Hello", "world", "!"]
+          print(words[0])
+          print(words[1])
+          print(words[2])</code>
+        The first list item's index is 0, rather than 1, as might be expected.
+
+        Sometimes you need to create an empty list and populate it later during the program. For example, if you are creating a queue management program, the queue is going to be empty in the beginning and get populated with people data later.
+
+        An empty list is created with an empty pair of square brackets.
+        <br>
+        For example:
+        <code>empty_list = []
+          print(empty_list)</code>
+        In some code samples you might see a comma after the last item in the list. It's not mandatory, but perfectly valid.
+
+        Typically, a list will contain items of a single item type, but it is also possible to include several different types.
+        Lists can also be nested within other lists.
+        <br>
+        For example:
+        <code>number = 3
+          things = ["string", 0, [1, 2, number], 4.56]
+          print(things[1])
+          print(things[2])
+          print(things[2][2])</code>
+        Nested lists can be used to represent 2D grids, such as matrices.
+
+        <br>
+        For example:
+        <code>m = [
+          [1,2,3],
+          [4,5,6]
+          ]
+
+          print(m[1][2]) </code>
+        A matrix-like structure can be used in cases where you need to store data in row-column format. For example, when creating a ticketing program, the seat numbers can be stored in a matrix, with their corresponding rows and numbers.
+        The code above outputs the 3rd item of the 2nd row.
+
+        Some types, such as strings, can be indexed like lists.
+        Indexing strings behaves as though you are indexing a list containing each character in the string.
+        <br>
+        For example:
+        <code>str = "Hello world!"
+          print(str[6])</code>
+        Space (" ") is also a symbol and has an index.
+        Trying to access a non-existing index will produce an error.
+      </p>
+      <p>
+        <strong>List Operations</strong>
+        <br>
+        The item at a certain index in a list can be reassigned.
+        <br>
+        For example:
+        <code>nums = [7, 7, 7, 7, 7]
+          nums[2] = 5
+          print(nums)</code>
+        You can replace the item with an item of a different type.
+        Lists can be added and multiplied in the same way as strings.
+        <br>
+        For example:
+        <code>nums = [1, 2, 3]
+          print(nums + [4, 5, 6])
+          print(nums * 3)</code>
+        Lists and strings are similar in many ways - strings can be thought of as lists of characters that can't be changed.
+        For example, the string "Hello" can be thought of as a list, where each character is an item in the list. The first item is "H", the second item is "e", and so on.
+
+        To check if an item is in a list, the in operator can be used.
+        It returns True if the item occurs one or more times in the list, and False if it doesn't.
+        <br>
+        For example:
+        <code>words = ["spam", "egg", "spam", "sausage"]
+          print("spam" in words)
+          print("egg" in words)
+          print("tomato" in words)</code>
+        The in operator is also used to determine whether or not a string is a substring of another string.
+        To check if an item is not in a list, you can use the not operator in one of the following ways:
+        <br>
+        For example:
+        <code>nums = [1, 2, 3]
+          print(not 4 in nums)
+          print(4 not in nums)
+          print(not 3 in nums)
+          print(3 not in nums)</code>
+        Tap Try It Yourself to play around with the code!
+      </p>
+      <p>
+        <strong>List Functions</strong>
+        <br>
+        The append method adds an item to the end of an existing list.
+        <br>
+        For example:
+        <code>nums = [1, 2, 3]
+          nums.append(4)
+          print(nums)</code>
+        The dot before append is there because it is a method of the list class. Methods will be explained in a later lesson.
+
+        To get the number of items in a list, you can use the len function.
+        <br>
+        For example:
+        <code>nums = [1, 3, 5, 2, 4]
+          print(len(nums))</code>
+        Unlike the index of the items, len does not start with 0. So, the list above contains 5 items, meaning len will return 5
+        len is written before the list it is being called on, without a dot..
+
+        The insert method is similar to append, except that it allows you to insert a new item at any position in the list, as opposed to just at the end.
+        <br>
+        For example:
+        <code>words = ["Python", "fun"]
+          index = 1
+          words.insert(index, "is")
+          print(words)</code>
+        Elements, that are after the inserted item, are shifted to the right.
+
+        The index method finds the first occurrence of a list item and returns its index.
+        If the item isn't in the list, it raises a ValueError.
+        <br>
+        For example:
+        <code>etters = ['p', 'q', 'r', 's', 'p', 'u']
+          print(letters.index('r'))
+          print(letters.index('p'))
+          print(letters.index('z'))</code>
+        There are a few more useful functions and methods for lists.
+        max(list): Returns the list item with the maximum value
+        min(list): Returns the list item with minimum value
+        list.count(item): Returns a count of how many times an item occurs in a list
+        list.remove(item): Removes an object from a list
+        list.reverse(): Reverses items in a list.
+        For example, you can count how many 42s are there in the list using:
+        items.count(42)
+        where items is the name of our list.
+      </p>
+      <p>
+        <strong>while Loops</strong>
+        <br>
+        A while loop is used to repeat a block of code multiple times.
+        For example, let's say we need to process multiple user inputs, so that each time the user inputs something, the same block of code needs to execute.
+
+        Below is a while loop containing a variable that counts up from 1 to 5, at which point the loop terminates.
+        <br>
+        For example:
+        <code>i = 1
+          while i <=5: print(i) i=i + 1 print("Finished!") </code>
+            During each loop iteration, the i variable will get incremented by one, until it reaches 5.
+            So, the loop will execute the print statement 5 times.
+            The code in the body of a while loop is executed repeatedly. This is called iteration.
+
+            You can use multiple statements in the while loop.
+
+            For example, you can use an if statement to make decisions. This can be useful, if you are making a game and need to loop through a number of player actions and add or remove points of the player.
+
+            The code below uses an if/else statement inside a while loop to separate the even and odd numbers in the range of 1 to 10:
+            <br>
+            For example:
+            <code>x = 1
+              while x < 10: if x%2==0: print(str(x) + " is even" ) else: print(str(x) + " is odd" ) x +=1 </code>
+                str(x) is used to convert the number x to a string, so that it can be used for concatenation.
+                In console, you can stop the program's execution by using the Ctrl-C shortcut or by closing the program.
+                <strong>break</strong>
+                <br>
+                To end a while loop prematurely, the break statement can be used.
+                For example, we can break an infinite loop if some condition is met:
+                <br>
+                For example:
+                <code>i = 0
+                  while 1==1:
+                  print(i)
+                  i = i + 1
+                  if i >= 5:
+                  print("Breaking")
+                  break
+
+                  print("Finished")</code>
+                while True is a short and easy way to make an infinite loop.
+                An example use case of break:
+                An infinite while loop can be used to continuously take user input. For example, you are making a calculator and need to take numbers from the user to add and stop, when the user enters "stop".
+                In this case, the break statement can be used to end the infinite loop when the user input equals "stop".
+                Using the break statement outside of a loop causes an error.
+                <strong>continue</strong>
+                <br>
+                Another statement that can be used within loops is continue.
+                Unlike break, continue jumps back to the top of the loop, rather than stopping it. Basically, the continue statement stops the current iteration and continues with the next one.
+                <br>
+                For example:
+                <code>i = 0
+                  while (i < 5): i +=1 if i==3: print("Skipping 3") continue print(i) </code>
+                    An example use case of continue:
+                    An airline ticketing system needs to calculate the total cost for all tickets purchased. The tickets for children under the age of 1 are free. We can use a while loop to iterate through the list of passengers and calculate the total cost of their tickets. Here, the continue statement can be used to skip the children.
+                    Using the continue statement outside of a loop causes an error
+      </p>
+      <p>
+        <strong>for Loop</strong>
+        <br>
+        The for loop is used to iterate over a given sequence, such as lists or strings.
+
+        The code below outputs each item in the list and adds an exclamation mark at the end:
+        <br>
+        For example:
+        <code>words = ["hello", "world", "spam", "eggs"]
+          for word in words:
+          print(word + "!")</code>
+
+        In the code above, the word variable represents the corresponding item of the list in each iteration of the loop.
+        During the 1st iteration, word is equal to "hello", and during the 2nd iteration it's equal to "world", and so on.
+
+        The for loop can be used to iterate over strings.
+        <br>
+        For example:
+        <code>tr = "testing for loops"
+          count = 0
+
+          for x in str:
+          if(x == 't'):
+          count += 1
+
+          print(count)</code>
+        The code above defines a count variable, iterates over the string and calculates the count of 't' letters in it. During each iteration, the x variable represents the current letter of the string.
+        The count variable is incremented each time the letter 't' is found, thus, at the end of the loop it represents the number of 't' letters in the string.
+
+        Similar to while loops, the break and continue statements can be used in for loops, to stop the loop or jump to the next iteration.
+        <strong>for vs while</strong>
+        <br>
+        Both, for and while loops can be used to execute a block of code for multiple times.
+        It is common to use the for loop when the number of iterations is fixed. For example, iterating over a fixed list of items in a shopping list.
+
+        The while loop is used in cases when the number of iterations is not known and depends on some calculations and conditions in the code block of the loop.
+
+        For example, ending the loop when the user enters a specific input in a calculator program.
+        Both, for and while loops can be used to achieve the same results, however, the for loop has cleaner and shorter syntax, making it a better choice in most cases.
+      </p>
+      <p>
+        <strong>Range</strong>
+        <br>
+        The range() function returns a sequence of numbers.
+        By default, it starts from 0, increments by 1 and stops before the specified number.
+
+        The code below generates a list containing all of the integers, up to 10.
+        <br>
+        For example:
+        <code>numbers = list(range(10))
+          print(numbers)</code>
+        In order to output the range as a list, we need to explicitly convert it to a list, using the list() function.
+
+        If range is called with one argument, it produces an object with values from 0 to that argument.
+
+        If it is called with two arguments, it produces values from the first to the second.
+        <br>
+        For example:
+        <code>numbers = list(range(3, 8))
+          print(numbers)
+
+          print(range(20) == range(0, 20))</code>
+
+        Remember, the second argument is not included in the range, so range(3, 8) will not include the number 8.
+
+        range can have a third argument, which determines the interval of the sequence produced, also called the step.
+        <br>
+        For example:
+        <code>numbers = list(range(5, 20, 2))
+          print(numbers)</code>
+        We can also create list of decreasing numbers, using a negative number as the third argument, for example list(range(20, 5, -2))
+
+        <strong>for Loops</strong>
+        <br>
+        The for loop is commonly used to repeat some code a certain number of times. This is done by combining for loops with range objects.
+        <br>
+        For example:
+        <code>or i in range(5):
+          print("hello!")</code>
+        You don't need to call list on the range object when it is used in a for loop, because it isn't being indexed, so a list isn't required.
+      </p>
+    </article>
+  </section>
+  <!-- Functions & Modules  -->
+  <section class="main-section" id="Functions & Modules">
+    <header>Functions & Modules</header>
+    <article>
+      <p>
+        <strong>Code Reuse
+          Reusing Code</strong>
+        <br>
+        Code reuse is a very important part of programming in any language. Increasing code size makes it harder to maintain.
+        For a large programming project to be successful, it is essential to abide by the Don't Repeat Yourself, or DRY, principle. We've already looked at one way of doing this: by using loops. In this module, we will explore two more: functions and modules.
+        Bad, repetitive code is said to abide by the WET principle, which stands for Write Everything Twice, or We Enjoy Typing.
+        <strong>Functions</strong>
+        <br>
+        You've already used functions in previous lessons.
+        Any statement that consists of a word followed by information in parentheses is a function call.
+        Here are some examples that you've already seen:
+        <br>
+        For example:
+        <code>print("Hello world!")
+          range(2, 20)
+          str(12)
+          range(10, 20, 3)</code>
+        The words in front of the parentheses are function names, and the comma-separated values inside the parentheses are function arguments
+      </p>
+      <p>
+        <strong>Functions</strong>
+        <br>
+        In addition to using pre-defined functions, you can create your own functions by using the def statement.
+        Here is an example of a function named my_func. It takes no arguments, and prints "spam" three times. It is defined, and then called. The statements in the function are executed only when the function is called.
+        <br>
+        For example:
+        <code>def my_func():
+          print("spam")
+          print("spam")
+          print("spam")
+
+          my_func()</code>
+        You must define functions before they are called, in the same way that you must assign variables before using them.
+        <br>
+        For example:
+        <code>hello()
+
+          def hello():
+          print("Hello world!")</code>
+        Tap Try It Yourself to play around with the code!
+      </p>
+      <p>
+        <strong>Function Arguments
+          Arguments</strong>
+        <br>
+        All the function definitions we've looked at so far have been functions of zero arguments, which are called with empty parentheses.
+        However, most functions take arguments.
+        The example below defines a function that takes one argument:
+        <br>
+        For example:
+        <code>def print_with_exclamation(word):
+          print(word + "!")
+
+          print_with_exclamation("spam")
+          print_with_exclamation("eggs")
+          print_with_exclamation("python")</code>
+        As you can see, the argument is defined inside the parentheses.
+        <strong>Arguments</strong>
+        <br>
+        You can also define functions with more than one argument; separate them with commas.
+        <br>
+        For example:
+        <code>def print_sum_twice(x, y):
+          print(x + y)
+          print(x + y)
+
+          print_sum_twice(5, 8)</code>
+        Tap Try It Yourself to play around with the code!
+        Function arguments can be used as variables inside the function definition. However, they cannot be referenced outside of the function's definition. This also applies to other variables created inside a function.
+        <br>
+        For example:
+        <code>def function(variable):
+          variable += 1
+          print(variable)
+
+          function(7)
+          print(variable)</code>
+        This code will throw an error because the variable is defined inside the function and can be referenced only there.
+        Technically, parameters are the variables in a function definition, and arguments are the values put into parameters when functions are called.
+      </p>
+      <p>
+        <strong>Returning from Functions</strong>
+        <br>
+        Certain functions, such as int or str, return a value that can be used later.
+        To do this for your defined functions, you can use the return statement.
+        <br>
+        For example:
+        <code>def max(x, y):
+          if x >=y:
+          return x
+          else:
+          return y
+
+          print(max(4, 7))
+          z = max(8, 5)
+          print(z)</code>
+        The return statement cannot be used outside of a function definition.
+        Once you return a value from a function, it immediately stops being executed. Any code after the return statement will never happen.
+        <br>
+        For example:
+        <code>def add_numbers(x, y):
+          total = x + y
+          return total
+          print("This won't be printed")
+
+          print(add_numbers(4, 5))</code>
+        Tap Try It Yourself to play around with the code!
+      </p>
+      <p>
+        <strong>Comments & Docstrings
+          Comments
+        </strong>
+        <br>
+        Comments are annotations to code used to make it easier to understand. They don't affect how code is run.
+        In Python, a comment is created by inserting an octothorpe (otherwise known as a number sign or hash symbol: #). All text after it on that line is ignored.
+        <br>
+        For example:
+        <code>x = 365
+          y = 7
+          # this is a comment
+
+          print(x % y) # find the remainder
+          # print (x // y)
+          # another comment</code>
+        Python doesn't have general purpose multiline comments, as do programming languages such as C.
+        <strong>Docstrings</strong>
+        <br>
+        Docstrings (documentation strings) serve a similar purpose to comments, as they are designed to explain code. However, they are more specific and have a different syntax. They are created by putting a multiline string containing an explanation of the function below the function's first line
+        <br>
+        For example:
+        <code>def shout(word):
+          """
+          Print a word with an
+          exclamation mark following it.
+          """
+          print(word + "!")
+
+          shout("spam")</code>
+        Unlike conventional comments, docstrings are retained throughout the runtime of the program. This allows the programmer to inspect these comments at run time.
+      </p>
+      <p>
+        <strong>Functions as Objects
+          Functions
+        </strong>
+        <br>
+        Although they are created differently from normal variables, functions are just like any other kind of value.
+        They can be assigned and reassigned to variables, and later referenced by those names.
+        <br>
+        For example:
+        <code>def multiply(x, y):
+          return x * y
+
+          a = 4
+          b = 7
+          operation = multiply
+          print(operation(a, b))</code>
+        The example above assigned the function multiply to a variable operation. Now, the name operation can also be used to call the function.
+        Functions can also be used as arguments of other functions.
+        <br>
+        For example:
+        <code>def add(x, y):
+          return x + y
+
+          def do_twice(func, x, y):
+          return func(func(x, y), func(x, y))
+
+          a = 5
+          b = 10
+
+          print(do_twice(add, a, b))</code>
+        As you can see, the function do_twice takes a function as its argument and calls it in its body.
+      </p>
+      <p>
+        <strong>Modules</strong>
+        <br>
+        Modules are pieces of code that other people have written to fulfill common tasks, such as generating random numbers, performing mathematical operations, etc.
+
+        The basic way to use a module is to add import module_name at the top of your code, and then using module_name.var to access functions and values with the name var in the module.
+        For example, the following example uses the random module to generate random numbers:
+        <br>
+        For example:
+        <code>import random
+
+          for i in range(5):
+          value = random.randint(1, 6)
+          print(value)</code>
+        The code uses the randint function defined in the random module to print 5 random numbers in the range 1 to 6.
+
+        There is another kind of import that can be used if you only need certain functions from a module.
+        These take the form from module_name import var, and then var can be used as if it were defined normally in your code.
+        For example, to import only the pi constant from the math module:
+        <br>
+        For example:
+        <code>from math import pi
+
+          print(pi)</code>
+        Use a comma separated list to import multiple objects. For example:
+        * imports all objects from a module. For example: from math import *
+        This is generally discouraged, as it confuses variables in your code with variables in the external module.
+
+        Trying to import a module that isn't available causes an ImportError.
+        <br>
+        For example:
+        <code>Import some_module</code>
+        Trying to import a module that isn't available causes an ImportError.
+
+        You can import a module or object under a different name using the as keyword. This is mainly used when a module or object has a long or confusing name.
+        <br>
+        For example:
+        <code>from math import sqrt as square_root
+          print(square_root(100))</code>
+        Tap Try It Yourself to play around with the code!
+      </p>
+      <p>
+        <strong>The Standard Library & pip
+          Modules
+        </strong>
+        <br>
+        There are three main types of modules in Python, those you write yourself, those you install from external sources, and those that are preinstalled with Python.
+        The last type is called the standard library, and contains many useful modules. Some of the standard library's useful modules include string, re, datetime, math, random, os, multiprocessing, subprocess, socket, email, json, doctest, unittest, pdb, argparse and sys.
+
+        Tasks that can be done by the standard library include string parsing, data serialization, testing, debugging and manipulating dates, emails, command line arguments, and much more!
+        Python's extensive standard library is one of its main strengths as a language.
+        <br>
+        Many third-party Python modules are stored on the Python Package Index (PyPI).
+        The best way to install these is using a program called pip. This comes installed by default with modern distributions of Python. If you don't have it, it is easy to install online. Once you have it, installing libraries from PyPI is easy. Look up the name of the library you want to install, go to the command line (for Windows it will be the Command Prompt), and enter pip install library_name. Once you've done this, import the library and use it in your code.
+
+        Using pip is the standard way of installing libraries on most operating systems, but some libraries have prebuilt binaries for Windows. These are normal executable files that let you install libraries with a GUI the same way you would install other programs.
+        It's important to enter pip commands at the command line, not the Python interpreter.
+        <strong>The Standard Library</strong>
+        <br>
+        Some of the modules in the standard library are written in Python, and some are written in C.
+        Most are available on all platforms, but some are Windows or Unix specific.
+        We won't cover all of the modules in the standard library; there are simply too many. The complete documentation for the standard library is available online at www.python.org.
+      </p>
+    </article>
+  </section>
+  <!-- Exceptions & Files  -->
+  <section class="main-section" id="Exceptions & Files">
+    <header>Exceptions & Files</header>
+    <article>
+      <p>
+        <strong>Exceptions & Files
+          Exceptions
+        </strong>
+        <br>
+        You have already seen exceptions in previous code. They occur when something goes wrong, due to incorrect code or input. When an exception occurs, the program immediately stops.
+        The following code produces the ZeroDivisionError exception by trying to divide 7 by 0.
+        <br>
+        For example:
+        <code>num1 = 7
+          num2 = 0
+          print(num1/num2)</code>
+        Tap Try It Yourself to play around with the code!
+        <br>
+        Different exceptions are raised for different reasons.
+        Common exceptions:
+        ImportError: an import fails;
+        IndexError: a list is indexed with an out-of-range number;
+        NameError: an unknown variable is used;
+        SyntaxError: the code can't be parsed properly;
+        TypeError: a function is called on a value of an inappropriate type;
+        ValueError: a function is called on a value of the correct type, but with an inappropriate value.
+        Python has several other built-in exceptions, such as ZeroDivisionError and OSError. Third-party libraries also often define their own exceptions.
+      </p>
+      <p>
+        <strong>Exception Handling</strong>
+        <br>
+        To handle exceptions, and to call code when an exception occurs, you can use a try/except statement.
+        The try block contains code that might throw an exception. If that exception occurs, the code in the try block stops being executed, and the code in the except block is run. If no error occurs, the code in the except block doesn't run.
+        <br>
+        For example:
+        <code>try:
+          num1 = 7
+          num2 = 0
+          print (num1 / num2)
+          print("Done calculation")
+          except ZeroDivisionError:
+          print("An error occurred")
+          print("due to zero division")</code>
+        In the code above, the except statement defines the type of exception to handle (in our case, the ZeroDivisionError).
+        <br>
+        A try statement can have multiple different except blocks to handle different exceptions.
+        Multiple exceptions can also be put into a single except block using parentheses, to have the except block handle all of them.
+        <br>
+        For example:
+        <code>try:
+          variable = 10
+          print(variable + "hello")
+          print(variable / 2)
+          except ZeroDivisionError:
+          print("Divided by zero")
+          except (ValueError, TypeError):
+          print("Error occurred")</code>
+        Tap Try It Yourself to play around with the code!
+        <br>
+        An except statement without any exception specified will catch all errors. These should be used sparingly, as they can catch unexpected errors and hide programming mistakes.
+        <br>
+        For example:
+        <code>try:
+          word = "spam"
+          print(word / 0)
+          except:
+          print("An error occurred")</code>
+        Exception handling is particularly useful when dealing with user input.
+      </p>
+      <p>
+        <strong>finally</strong>
+        <br>
+        To ensure some code runs no matter what errors occur, you can use a finally statement. The finally statement is placed at the bottom of a try/except statement. Code within a finally statement always runs after execution of the code in the try, and possibly in the except, blocks.
+        <br>
+        For example:
+        <code>try:
+          print("Hello")
+          print(1 / 0)
+          except ZeroDivisionError:
+          print("Divided by zero")
+          finally:
+          print("This code will run no matter what")</code>
+        Run the code and see how it works!
+        <br>
+        Code in a finally statement even runs if an uncaught exception occurs in one of the preceding blocks.
+        <br>
+        For example:
+        <code>try:
+          print(1)
+          print(10 / 0)
+          except ZeroDivisionError:
+          print(unknown_var)
+          finally:
+          print("This is executed last")</code>
+        Run the code and see how it works!
+      </p>
+      <p>
+        <strong>Raising Exceptions</strong>
+        You can raise exceptions by using the raise statement.
+        <br>
+        For example:
+        <code>print(1)
+          raise ValueError
+          print(2)</code>
+        You need to specify the type of the exception raised.
+
+        Exceptions can be raised with arguments that give detail about them.
+        <br>
+        For example:
+        <code>name = "123"
+          raise NameError("Invalid name!")</code>
+        Run the code and see how it works!
+
+        In except blocks, the raise statement can be used without arguments to re-raise whatever exception occurred.
+        <br>
+        For example:
+        <code>try:
+          num = 5 / 0
+          except:
+          print("An error occurred")
+          raise</code>
+        Run the code and see how it works!
+      </p>
+      <p>
+        <strong>Assertions</strong>
+        <br>
+        An assertion is a sanity-check that you can turn on or turn off when you have finished testing the program.
+        An expression is tested, and if the result comes up false, an exception is raised.
+        Assertions are carried out through use of the assert statement.
+        <br>
+        For example:
+        <code>print(1)
+          assert 2 + 2 == 4
+          print(2)
+          assert 1 + 1 == 3
+          print(3)</code>
+        Programmers often place assertions at the start of a function to check for valid input, and after a function call to check for valid output.
+        <br>
+        The assert can take a second argument that is passed to the AssertionError raised if the assertion fails.
+        <br>
+        For example:
+        <code>temp = -10
+          assert (temp >= 0), "Colder than absolute zero!"</code>
+        AssertionError exceptions can be caught and handled like any other exception using the try-except statement, but if not handled, this type of exception will terminate the program.
+      </p>
+      <p>
+        <strong>Opening Files</strong>
+        <br>
+        You can use Python to read and write the contents of files.
+        Text files are the easiest to manipulate. Before a file can be edited, it must be opened, using the open function.
+        <br>
+        For example:
+        <code>myfile = open("filename.txt")</code>
+        The argument of the open function is the path to the file. If the file is in the current working directory of the program, you can specify only its name.
+        <br>
+        You can specify the mode used to open a file by applying a second argument to the open function.
+        Sending "r" means open in read mode, which is the default.
+        Sending "w" means write mode, for rewriting the contents of a file.
+        Sending "a" means append mode, for adding new content to the end of the file.
+
+        Adding "b" to a mode opens it in binary mode, which is used for non-text files (such as image and sound files).
+        <br>
+        For example:
+        <code># write mode
+          open("filename.txt", "w")
+
+          # read mode
+          open("filename.txt", "r")
+          open("filename.txt")
+
+          # binary write mode
+          open("filename.txt", "wb")</code>
+        You can use the + sign with each of the modes above to give them extra access to files. For example, r+ opens the file for both reading and writing.
+        <br>
+        Once a file has been opened and used, you should close it.
+        This is done with the close method of the file.
+        <br>
+        For example:
+        <code>file = open("filename.txt", "w")
+          # do stuff to the file
+          file.close()</code>
+        We will read/write content to files in the upcoming lessons.
+      </p>
+      <p>
+        <strong>Reading Files</strong>
+        The contents of a file that has been opened in text mode can be read using the read method.
+        <br>
+        For example:
+        <code>file = open("filename.txt", "r")
+          cont = file.read()
+          print(cont)
+          file.close()</code>
+        This will print all of the contents of the file "filename.txt".
+        <br>
+        To read only a certain amount of a file, you can provide a number as an argument to the read function. This determines the number of bytes that should be read.
+        You can make more calls to read on the same file object to read more of the file byte by byte. With no argument, read returns the rest of the file.
+        <br>
+        For example:
+        <code>file = open("filename.txt", "r")
+          print(file.read(16))
+          print(file.read(4))
+          print(file.read(4))
+          print(file.read())
+          file.close()</code>
+        Just like passing no arguments, negative values will return the entire contents.
+        <br>
+        After all contents in a file have been read, any attempts to read further from that file will return an empty string, because you are trying to read from the end of the file.
+        <br>
+        For example:
+        <code>ile = open("filename.txt", "r")
+          file.read()
+          print("Re-reading")
+          print(file.read())
+          print("Finished")
+          file.close()</code>
+        Just like passing no arguments, negative values will return the entire contents.
+        To retrieve each line in a file, you can use the readlines method to return a list in which each element is a line in the file.
+        <br>
+        For example:
+        <code>file = open("filename.txt", "r")
+          print(file.readlines())
+          file.close()</code>
+        You can also use a for loop to iterate through the lines in the file:
+        <br>
+        For example:
+        <code>file = open("filename.txt", "r")
+
+          for line in file:
+          print(line)
+
+          file.close() </code>
+        In the output, the lines are separated by blank lines, as the print function automatically adds a new line at the end of its output.
+      </p>
+      <p>
+        <strong>Writing Files</strong>
+        <br>
+        To write to files you use the write method, which writes a string to the file.
+        <br>
+        For example:
+        <code>file = open("newfile.txt", "w")
+          file.write("This has been written to a file")
+          file.close()
+
+          file = open("newfile.txt", "r")
+          print(file.read())
+          file.close()</code>
+        The "w" mode will create a file, if it does not already exist.
+        <br>
+        When a file is opened in write mode, the file's existing content is deleted.
+        <br>
+        For example:
+        <code>
+          file = open("newfile.txt", "w")
+          file.write("Some new text")
+          file.close()
+
+          file = open("newfile.txt", "r")
+          print("Reading new contents")
+          print(file.read())
+          print("Finished")
+          file.close()
+        </code>
+        As you can see, the content of the file has been overwritten.
+        <br>
+        The write method returns the number of bytes written to a file, if successful.
+        <br>
+        For example:
+        <code>msg = "Hello world!"
+          file = open("newfile.txt", "w")
+          amount_written = file.write(msg)
+          print(amount_written)
+          file.close()</code>
+        This ensures that the file is always closed, even if an error occurs.
+      </p>
+      <p>
+        <strong>Working with Files</strong>
+        <br>
+        It is good practice to avoid wasting resources by making sure that files are always closed after they have been used. One way of doing this is to use try and finally
+        <br>
+        For example:
+        <code>ry:
+          f = open("filename.txt")
+          print(f.read())
+          finally:
+          f.close()</code>
+        This ensures that the file is always closed, even if an error occurs.
+        <br>
+        An alternative way of doing this is using with statements. This creates a temporary variable (often called f), which is only accessible in the indented block of the with statement.
+        <br>
+        For example:
+        <code>with open("filename.txt") as f:
+          print(f.read())</code>
+        The file is automatically closed at the end of the with statement, even if exceptions occur within it.
+      </p>
+    </article>
+  </section>
+  <!-- More Types  -->
+  <section class="main-section" id="More Types">
+    <header>More Types</header>
+    <article>
+      <p>
+        <strong>None</strong>
+        <br>
+        The None object is used to represent the absence of a value.
+        It is similar to null in other programming languages.
+        Like other "empty" values, such as 0, [] and the empty string, it is False when converted to a Boolean variable.
+        When entered at the Python console, it is displayed as the empty string.
+        <br>
+        For example:
+        <code>None == None
+          print(None)</code>
+        Run the code and see how it works!
+        <br>
+        The None object is returned by any function that doesn't explicitly return anything else
+        <br>
+        For example:
+        <code>def some_func():
+          print("Hi!")
+
+          var = some_func()
+          print(var)</code>
+        Run the code and see how it works!
+      </p>
+      <p>
+        <strong>Dictionaries</strong>
+        <br>
+        Dictionaries are data structures used to map arbitrary keys to values.
+        Lists can be thought of as dictionaries with integer keys within a certain range.
+        Dictionaries can be indexed in the same way as lists, using square brackets containing keys.
+        <br>
+        For example:
+        <code>ages = {"Dave": 24, "Mary": 42, "John": 58}
+          print(ages["Dave"])
+          print(ages["Mary"])</code>
+        Each element in a dictionary is represented by a key:value pair.
+        <br>
+        Trying to index a key that isn't part of the dictionary returns a KeyError.
+        <br>
+        For example:
+        <code>primary = {
+          "red": [255, 0, 0],
+          "green": [0, 255, 0],
+          "blue": [0, 0, 255],
+          }
+
+          print(primary["red"])
+          print(primary["yellow"])</code>
+        As you can see, a dictionary can store any types of data as values.
+        An empty dictionary is defined as {}.
+        <br>
+        Only immutable objects can be used as keys to dictionaries. Immutable objects are those that can't be changed. So far, the only mutable objects you've come across are lists and dictionaries. Trying to use a mutable object as a dictionary key causes a TypeError.
+        <br>
+        For example:
+        <code>bad_dict = {
+          [1, 2, 3]: "one two three",
+          }</code>
+        Run the code and see how it works!
+      </p>
+      <p>
+        <strong>Dictionary Functions
+          Dictionaries
+        </strong>
+        <br>
+        Just like lists, dictionary keys can be assigned to different values.
+        However, unlike lists, a new dictionary key can also be assigned a value, not just ones that already exist.
+        <br>
+        For example:
+        <code>squares = {1: 1, 2: 4, 3: "error", 4: 16,}
+          squares[8] = 64
+          squares[3] = 9
+          print(squares)</code>
+        Run the code and see how it works!
+        <br>
+        To determine whether a key is in a dictionary, you can use in and not in, just as you can for a list.
+        <br>
+        For example:
+        <code>nums = {
+          1: "one",
+          2: "two",
+          3: "three",
+          }
+          print(1 in nums)
+          print("three" in nums)
+          print(4 not in nums)</code>
+        Run the code and see how it works!
+        <br>
+        A useful dictionary method is get. It does the same thing as indexing, but if the key is not found in the dictionary it returns another specified value instead ('None', by default).
+        <br>
+        For example:
+        <code>pairs = {1: "apple",
+          "orange": [2, 3, 4],
+          True: False,
+          None: "True",
+          }
+
+          print(pairs.get("orange"))
+          print(pairs.get(7))
+          print(pairs.get(12345, "not in dictionary"))</code>
+        Run the code and see how it works!
+      </p>
+      <p>
+        <strong>Tuplas</strong>
+        <br>
+        Tuples are very similar to lists, except that they are immutable (they cannot be changed).
+        Also, they are created using parentheses, rather than square brackets.
+        <br>
+        For example:
+        <code>words = ("spam", "eggs", "sausages",)</code>
+        You can access the values in the tuple with their index, just as you did with lists:
+        <br>
+        For example:
+        <code>words = ("spam", "eggs", "sausages",)
+          print(words[0])</code>
+        Trying to reassign a value in a tuple causes a TypeError.
+        <br>
+        For example:
+        <code>words = ("spam", "eggs", "sausages",)
+          words[1] = "cheese"</code>
+        Like lists and dictionaries, tuples can be nested within each other.
+        <br>
+        Tuples can be created without the parentheses, by just separating the values with commas.
+        <br>
+        For example:
+        <code>my_tuple = "one", "two", "three"
+          print(my_tuple[0])</code>
+        An empty tuple is created using an empty parenthesis pair.
+        <br>
+        For example:
+        <code>tpl = ()</code>
+        Tuples are faster than lists, but they cannot be changed.
+      </p>
+      <p>
+        <strong>List Slices</strong>
+        <br>
+        List slices provide a more advanced way of retrieving values from a list. Basic list slicing involves indexing a list with two colon-separated integers. This returns a new list containing all the values in the old list between the indices.
+        <br>
+        For example:
+        <code>squares = [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+          print(squares[2:6])
+          print(squares[3:8])
+          print(squares[0:1])</code>
+        Like the arguments to range, the first index provided in a slice is included in the result, but the second isn't.
+        <br>
+        If the first number in a slice is omitted, it is taken to be the start of the list.
+        If the second number is omitted, it is taken to be the end.
+        <br>
+        For example:
+        <code>squares = [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+          print(squares[:7])
+          print(squares[7:])</code>
+        Slicing can also be done on tuples.
+        <br>
+        List slices can also have a third number, representing the step, to include only alternate values in the slice.
+        <br>
+        For example:
+        <code>squares = [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+          print(squares[::2])
+          print(squares[2:8:3])</code>
+        [2:8:3] will include elements starting from the 2nd index up to the 8th with a step of 3.
+        <br>
+        Negative values can be used in list slicing (and normal list indexing). When negative values are used for the first and second values in a slice (or a normal index), they count from the end of the list.
+        <br>
+        For example:
+        <code>squares = [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+          print(squares[1:-1])</code>
+        If a negative value is used for the step, the slice is done backwards.
+        Using [::-1] as a slice is a common and idiomatic way to reverse a list.
+      </p>
+      <p>
+        <strong>List Comprehensions</strong>
+        <br>
+        List comprehensions are a useful way of quickly creating lists whose contents obey a simple rule.
+        <br>
+        For example:
+        <code># a list comprehension
+          cubes = [i**3 for i in range(5)]
+
+          print(cubes)</code>
+        List comprehensions are inspired by set-builder notation in mathematics.
+        <br>
+        A list comprehension can also contain an if statement to enforce a condition on values in the list.
+        <br>
+        For example:
+        <code>evens=[i**2 for i in range(10) if i**2 % 2 == 0]
+
+          print(evens)</code>
+        Run the code and see how it works!
+        <br>
+        Trying to create a list in a very extensive range will result in a MemoryError.
+        This code shows an example where the list comprehension runs out of memory.
+        <br>
+        For example:
+        <code>even = [2*i for i in range(10**100)]</code>
+        This issue is solved by generators, which are covered in the next module.
+      </p>
+      <p>
+        <strong>String Formatting</strong>
+        <br>
+        So far, to combine strings and non-strings, you've converted the non-strings to strings and added them.
+        String formatting provides a more powerful way to embed non-strings within strings. String formatting uses a string's format method to substitute a number of arguments in the string.
+        <br>
+        For example:
+        <code># string formatting
+          nums = [4, 5, 6]
+          msg = "Numbers: {0} {1} {2}". format(nums[0], nums[1], nums[2])
+          print(msg)</code>
+        Each argument of the format function is placed in the string at the corresponding position, which is determined using the curly braces { }.
+        <br>
+        String formatting can also be done with named arguments.
+        <br>
+        For example:
+        <code>a = "{x}, {y}".format(x=5, y=12)
+          print(a)</code>
+        Run the code and see how it works!
+      </p>
+      <p>
+        <strong>Useful Functions
+          String Functions
+        </strong>
+        <br>
+        Python contains many useful built-in functions and methods to accomplish common tasks.
+        join - joins a list of strings with another string as a separator.
+        replace - replaces one substring in a string with another.
+        startswith and endswith - determine if there is a substring at the start and end of a string, respectively.
+        To change the case of a string, you can use lower and upper.
+        The method split is the opposite of join turning a string with a certain separator into a list.
+        <br>
+        For example:
+        <code>print(", ".join(["spam", "eggs", "ham"]))
+          #prints "spam, eggs, ham"
+
+          print("Hello ME".replace("ME", "world"))
+          #prints "Hello world"
+
+          print("This is a sentence.".startswith("This"))
+          # prints "True"
+
+          print("This is a sentence.".endswith("sentence."))
+          # prints "True"
+
+          print("This is a sentence.".upper())
+          # prints "THIS IS A SENTENCE."
+
+          print("AN ALL CAPS SENTENCE".lower())
+          #prints "an all caps sentence"
+
+          print("spam, eggs, ham".split(", "))
+          #prints "['spam', 'eggs', 'ham']"</code>
+        Run the code and see how it works!
+        <strong>Numeric Functions</strong>
+        <br>
+        To find the maximum or minimum of some numbers or a list, you can use max or min.
+        To find the distance of a number from zero (its absolute value), use abs.
+        To round a number to a certain number of decimal places, use round.
+        To find the total of a list, use sum.
+        <br>
+        For example:
+        <code>print(min(1, 2, 3, 4, 0, 2, 1))
+          print(max([1, 4, 9, 2, 5, 6, 8]))
+          print(abs(-99))
+          print(abs(42))
+          print(sum([1, 2, 3, 4, 5]))</code>
+        Run the code and see how it works!
+        <br>
+        <strong>List Functions</strong>
+        <br>
+        Often used in conditional statements, all and any take a list as an argument, and return True if all or any (respectively) of their arguments evaluate to True (and False otherwise).
+        The function enumerate can be used to iterate through the values and indices of a list simultaneously.
+        <br>
+        For example:
+        <code>nums = [55, 44, 33, 22, 11]
+
+          if all([i > 5 for i in nums]):
+          print("All larger than 5")
+
+          if any([i % 2 == 0 for i in nums]):
+          print("At least one is even")
+
+          for v in enumerate(nums):
+          print(v)</code>
+        Run the code and see how it works!
+      </p>
+      <p>
+        <strong>Text Analyzer</strong>
+        <br>
+        This is an example project, showing a program that analyzes a sample file to find what percentage of the text each character occupies.
+        This section shows how a file could be open and read.
+        <br>
+        For example:
+        <code>filename = input("Enter a filename: ")
+
+          with open(filename) as f:
+          text = f.read()
+
+          print(text)</code>
+        This is sample content for demonstration purposes only.
+        <br>
+        This is sample content for demonstration purposes only.
+        <br>
+        For example:
+        <code>def count_char(text, char):
+          count = 0
+          for c in text:
+          if c == char:
+          count += 1
+          return count</code>
+        This function takes as its arguments the text of the file and one character, returning the number of times that character appears in the text.
+        Now we can call it for our file.
+        <br>
+        For example:
+        <code>filename = input("Enter a filename: ")
+          with open(filename) as f:
+          text = f.read()
+
+          print(count_char(text, "r"))</code>
+        The character "r" appears 83 times in the file.
+        <br>
+        The next part of the program finds what percentage of the text each character of the alphabet occupies.
+        <br>
+        For example:
+        <code>for char in "abcdefghijklmnopqrstuvwxyz":
+          perc = 100 * count_char(text, char) / len(text)
+          print("{0} - {1}%".format(char, round(perc, 2)))</code>
+        Let's put it all together and run the program:
+        <br>
+        For example:
+        <code>def count_char(text, char):
+          count = 0
+          for c in text:
+          if c == char:
+          count += 1
+          return count
+
+          file = open("newfile.txt", "w")
+          file.write("""Ornhgvshy vf orggre guna htyl.
+          Rkcyvpvg vf orggre guna vzcyvpvg.
+          Fvzcyr vf orggre guna pbzcyvpngrq.
+          Syng vf orggre guna arfgrq.
+          Fcenfr fv orggre guna qrafr.
+          Ernqnovyvgl pbhagf.
+          Fcrpvny pnfrf nera'g fcrpvny rabthu gb oernx gur ehyrf.
+          Nygubhtu cenpgvpnyvgl orgnf chevgl.
+          Reebef fubhyq arire cnff fvyragyl.
+          Hayrff rkcyvpvgyl fvyraprq.
+          Va gur snpr bs nzovthvgl, ershfr gur grzcgngvba bg thrff.
+          Gurer fubhyq or bar-- naq cersrenoylbayl bar --boivbhf jnl gb qb vg.
+          Nygubhtu gung jnl znl abg or boivbhf ng svefg hayrff lbh'er Qhgpu.
+          Abj vf orggre guna arrire.
+          Nygubhtu arire vf bsgra orggre guna *evtug* abj.
+          Vs gur vzcyrzragngvba vf uneq gb rkcynva, vg'f n onq vqrn.
+          Vs gur vzcyrzragngvba vf rnfl gb rkcynva, vg znl or n tbbq vqrn.
+          Anzrfcnprf ner bar ubaxvat terng vqrn -- yrg'f qb zber bs gubfr!""")
+          file.close()
+          filename = "newfile.txt"
+          with open(filename) as f:
+          text = f.read()
+
+          for char in "abcdefghijklmnopqrstuvwxyz":
+          perc = 100 * count_char(text, char) / len(text)
+          print("{0} - {1}%".format(char, round(perc, 2)))</code>
+        Run the code and see how it works!
+      </p>
+    </article>
+  </section>
+  <!-- Functional Programming  -->
+  <section class="main-section" id="Functional Programming">
+    <header>Functional Programming</header>
+    <article>
+      <p>
+        <strong>Functional Programming</strong>
+        <br>
+        Functional programming is a style of programming that (as the name suggests) is based around functions.
+        A key part of functional programming is higher-order functions. We have seen this idea briefly in the previous lesson on functions as objects. Higher-order functions take other functions as arguments, or return them as results.
+        <br>
+        For example:
+        <code>def apply_twice(func, arg):
+          return func(func(arg))
+
+          def add_five(x):
+          return x + 5
+
+          print(apply_twice(add_five, 10))</code>
+        The function apply_twice takes another function as its argument, and calls it twice inside its body.
+        <br>
+        Functional programming seeks to use pure functions. Pure functions have no side effects, and return a value that depends only on their arguments.
+        This is how functions in math work: for example, The cos(x) will, for the same value of x, always return the same result.
+        Below are examples of pure and impure functions.
+        <br>
+        Pure function:
+        <br>
+        For example:
+        <code>def pure_function(x, y):
+          temp = x + 2*y
+          return temp / (2*x + y)</code>
+        Impure function:
+        <br>
+        For example:
+        <code>some_list = []
+
+          def impure(arg):
+          some_list.append(arg)</code>
+        The function above is not pure, because it changed the state of some_list.
+        <br>
+        Pure Functions:
+        Using pure functions has both advantages and disadvantages.
+        Pure functions are:
+        - easier to reason about and test.
+        - more efficient. Once the function has been evaluated for an input, the result can be stored and referred to the next time the function of that input is needed, reducing the number of times the function is called. This is called memoization.
+        - easier to run in parallel.
+        The main disadvantage of using only pure functions is that they majorly complicate the otherwise simple task of I/O, since this appears to inherently require side effects.
+        They can also be more difficult to write in some situations.
+      </p>
+      <p>
+        <strong>Lambdas</strong>
+        <br>
+        Creating a function normally (using def) assigns it to a variable automatically.
+        This is different from the creation of other objects - such as strings and integers - which can be created on the fly, without assigning them to a variable.
+        The same is possible with functions, provided that they are created using lambda syntax. Functions created this way are known as anonymous.
+        This approach is most commonly used when passing a simple function as an argument to another function. The syntax is shown in the next example and consists of the lambda keyword followed by a list of arguments, a colon, and the expression to evaluate and return.
+        <br>
+        For example:
+        <code>def my_func(f, arg):
+          return f(arg)
+
+          my_func(lambda x: 2*x*x, 5)</code>
+        Lambda functions get their name from lambda calculus, which is a model of computation invented by Alonzo Church.
+        <br>
+        Lambda functions aren't as powerful as named functions.
+        They can only do things that require a single expression - usually equivalent to a single line of code.
+        <br>
+        For example:
+        <code>#named function
+          def polynomial(x):
+          return x**2 + 5*x + 4
+          print(polynomial(-4))
+
+          #lambda
+          print((lambda x: x**2 + 5*x + 4) (-4))</code>
+        In the code above, we created an anonymous function on the fly and called it with an argument.
+        <br>
+        Lambda functions can be assigned to variables, and used like normal functions.
+        <br>
+        For example:
+        <code>double = lambda x: x * 2
+          print(double(7))</code>
+        However, there is rarely a good reason to do this - it is usually better to define a function with def instead.
+      </p>
+      <p>
+        <strong>Map y filter</strong>
+        <br>
+        The built-in functions map and filter are very useful higher-order functions that operate on lists (or similar objects called iterables).
+        The function map takes a function and an iterable as arguments, and returns a new iterable with the function applied to each argument.
+        <br>
+        For example:
+        <code>def add_five(x):
+          return x + 5
+
+          nums = [11, 22, 33, 44, 55]
+          result = list(map(add_five, nums))
+          print(result)</code>
+        We could have achieved the same result more easily by using lambda syntax.
+        <br>
+        For example:
+        <code>nums = [11, 22, 33, 44, 55]
+
+          result = list(map(lambda x: x+5, nums))
+          print(result)</code>
+        To convert the result into a list, we used list explicitly.
+        <strong>filter</strong>
+        <br>
+        The function filter filters an iterable by removing items that don't match a predicate (a function that returns a Boolean).
+        <br>
+        For example:
+        <code>nums = [11, 22, 33, 44, 55]
+          res = list(filter(lambda x: x%2==0, nums))
+          print(res)</code>
+        Like map, the result has to be explicitly converted to a list if you want to print it.
+      </p>
+      <p>
+        <strong>Generators</strong>
+        <br>
+        Generators are a type of iterable, like lists or tuples.
+        Unlike lists, they don't allow indexing with arbitrary indices, but they can still be iterated through with for loops.
+        They can be created using functions and the yield statement.
+        <br>
+        For example:
+        <code>def countdown():
+          i=5
+          while i > 0:
+          yield i
+          i -= 1
+
+          for i in countdown():
+          print(i)</code>
+        The yield statement is used to define a generator, replacing the return of a function to provide a result to its caller without destroying local variables.
+        <br>
+        Due to the fact that they yield one item at a time, generators don't have the memory restrictions of lists.
+        In fact, they can be infinite!
+        <br>
+        For example:
+        <code>def infinite_sevens():
+          while True:
+          yield 7
+
+          for i in infinite_sevens():
+          print(i)</code>
+        In short, generators allow you to declare a function that behaves like an iterator, i.e. it can be used in a for loop.
+        <br>
+        Finite generators can be converted into lists by passing them as arguments to the list function.
+        <br>
+        For example:
+        <code>def numbers(x):
+          for i in range(x):
+          if i % 2 == 0:
+          yield i
+
+          print(list(numbers(11)))</code>
+        Using generators results in improved performance, which is the result of the lazy (on demand) generation of values, which translates to lower memory usage. Furthermore, we do not need to wait until all the elements have been generated before we start to use them.
+      </p>
+      <p>
+        <strong>Decorators</strong>
+        <br>
+        Decorators provide a way to modify functions using other functions.
+        This is ideal when you need to extend the functionality of functions that you don't want to modify.
+        <br>
+        For example:
+        <code>def decor(func):
+          def wrap():
+          print("============")
+          func()
+          print("============")
+          return wrap
+
+          def print_text():
+          print("Hello world!")
+
+          decorated = decor(print_text)
+          decorated()</code>
+        We defined a function named decor that has a single parameter func. Inside decor, we defined a nested function named wrap. The wrap function will print a string, then call func(), and print another string. The decor function returns the wrap function as its result.
+        We could say that the variable decorated is a decorated version of print_text - it's print_text plus something.
+        In fact, if we wrote a useful decorator we might want to replace print_text with the decorated version altogether so we always got our "plus something" version of print_text.
+        This is done by re-assigning the variable that contains our function:
+        <br>
+        For example:
+        <code>def decor(func):
+          def wrap():
+          print("============")
+          func()
+          print("============")
+          return wrap
+
+          def print_text():
+          print("Hello world!")
+
+          print_text = decor(print_text)
+          print_text()</code>
+        Now print_text corresponds to our decorated version.
+        <br>
+        In our previous example, we decorated our function by replacing the variable containing the function with a wrapped version.
+        <br>
+        For example:
+        <code>def decor(func):
+          def wrap():
+          print("============")
+          func()
+          print("============")
+          return wrap
+
+          def print_text():
+          print("Hello world!")
+
+          print_text = decor(print_text)
+
+          print_text();</code>
+        This pattern can be used at any time, to wrap any function.
+        Python provides support to wrap a function in a decorator by pre-pending the function definition with a decorator name and the @ symbol.
+        If we are defining a function we can "decorate" it with the @ symbol like:
+        <br>
+        For example:
+        <code>def decor(func):
+          def wrap():
+          print("============")
+          func()
+          print("============")
+          return wrap
+
+          @decor
+          def print_text():
+          print("Hello world!")
+
+          print_text();</code>
+        This will have the same result as the above code.
+        A single function can have multiple decorators.
+      </p>
+      <p>
+        <strong>Recursion</strong>
+        <br>
+        Recursion is a very important concept in functional programming.
+        The fundamental part of recursion is self-reference - functions calling themselves. It is used to solve problems that can be broken up into easier sub-problems of the same type.
+        A classic example of a function that is implemented recursively is the factorial function, which finds the product of all positive integers below a specified number.
+        For example, 5! (5 factorial) is 5 * 4 * 3 * 2 * 1 (120). To implement this recursively, notice that 5! = 5 * 4!, 4! = 4 * 3!, 3! = 3 * 2!, and so on. Generally, n! = n * (n-1)!.
+        Furthermore, 1! = 1. This is known as the base case, as it can be calculated without performing any more factorials.
+        Below is a recursive implementation of the factorial function.
+        <br>
+        For example:
+        <code>def factorial(x):
+          if x == 1:
+          return 1
+          else:
+          return x * factorial(x-1)
+
+          print(factorial(5))</code>
+        The base case acts as the exit condition of the recursion.
+        <br>
+        Recursive functions can be infinite, just like infinite while loops. These often occur when you forget to implement the base case.
+        Below is an incorrect version of the factorial function. It has no base case, so it runs until the interpreter runs out of memory and crashes.
+        <br>
+        For example:
+        <code>def factorial(x):
+          return x * factorial(x-1)
+
+          print(factorial(5))</code>
+        Run the code and see how it works!
+        Recursion can also be indirect. One function can call a second, which calls the first, which calls the second, and so on. This can occur with any number of functions.
+        <br>
+        For example:
+        <code>def is_even(x):
+          if x == 0:
+          return True
+          else:
+          return is_odd(x-1)
+
+          def is_odd(x):
+          return not is_even(x)
+
+          print(is_odd(17))
+          print(is_even(23))</code>
+        Run the code and see how it works!
+      </p>
+      <p>
+        <strong>Sets</strong>
+        <br>
+        Sets are data structures, similar to lists or dictionaries. They are created using curly braces, or the set function. They share some functionality with lists, such as the use of in to check whether they contain a particular item.
+        <br>
+        For example:
+        <code>num_set = {1, 2, 3, 4, 5}
+          word_set = set(["spam", "eggs", "sausage"])
+
+          print(3 in num_set)
+          print("spam" not in word_set)</code>
+        To create an empty set, you must use set(), as {} creates an empty dictionary.
+        <br>
+        Sets differ from lists in several ways, but share several list operations such as len.
+        They are unordered, which means that they can't be indexed.
+        They cannot contain duplicate elements.
+        Due to the way they're stored, it's faster to check whether an item is part of a set, rather than part of a list.
+        Instead of using append to add to a set, use add.
+        The method remove removes a specific element from a set; pop removes an arbitrary element.
+        <br>
+        For example:
+        <code>nums = {1, 2, 1, 3, 1, 4, 5, 6}
+          print(nums)
+          nums.add(-7)
+          nums.remove(3)
+          print(nums)</code>
+        Basic uses of sets include membership testing and the elimination of duplicate entries.
+        <br>
+        Sets can be combined using mathematical operations.
+        The union operator | combines two sets to form a new one containing items in either.
+        The intersection operator & gets items only in both.
+        The difference operator - gets items in the first set but not in the second.
+        The symmetric difference operator ^ gets items in either set, but not both.
+        <br>
+        For example:
+        <code>first = {1, 2, 3, 4, 5, 6}
+          second = {4, 5, 6, 7, 8, 9}
+
+          print(first | second)
+          print(first & second)
+          print(first - second)
+          print(second - first)
+          print(first ^ second)</code>
+        Run the code and see how it works!
+        <strong>Data Structures</strong>
+        <br>
+        As we have seen in the previous lessons, Python supports the following data structures: lists, dictionaries, tuples, sets.
+        When to use a dictionary:
+        - When you need a logical association between a key:value pair.
+        - When you need fast lookup for your data, based on a custom key.
+        - When your data is being constantly modified. Remember, dictionaries are mutable.
+        When to use the other types:
+        - Use lists if you have a collection of data that does not need random access. Try to choose lists when you need a simple, iterable collection that is modified frequently.
+        - Use a set if you need uniqueness for the elements.
+        - Use tuples when your data cannot change.
+        Many times, a tuple is used in combination with a dictionary, for example, a tuple might represent a key, because it's immutable.
+      </p>
+      <p>
+        <strong>itertools</strong>
+        <br>
+        The module itertools is a standard library that contains several functions that are useful in functional programming.
+        One type of function it produces is infinite iterators.
+        The function count counts up infinitely from a value.
+        The function cycle infinitely iterates through an iterable (for instance a list or string).
+        The function repeat repeats an object, either infinitely or a specific number of times.
+        <br>
+        For example:
+        <code>from itertools import count
+
+          for i in count(3):
+          print(i)
+          if i >=11:
+          break</code>
+        Run the code and see how it works!
+        <br>
+        There are many functions in itertools that operate on iterables, in a similar way to map and filter.
+        Some examples:
+        takewhile - takes items from an iterable while a predicate function remains true;
+        chain - combines several iterables into one long one;
+        accumulate - returns a running total of values in an iterable.
+        <br>
+        For example:
+        <code>from itertools import accumulate, takewhile
+
+          nums = list(accumulate(range(8)))
+          print(nums)
+          print(list(takewhile(lambda x: x<= 6, nums)))</code>
+            Run the code and see how it works!
+            <br>
+            There are also several combinatoric functions in itertool, such as product and permutation.
+            These are used when you want to accomplish a task with all possible combinations of some items.
+            <br>
+            For example:
+            <code>from itertools import product, permutations
+
+              letters = ("A", "B")
+              print(list(product(letters, range(2))))
+              print(list(permutations(letters))) </code>
+            Run the code and see how it works!
+      </p>
+    </article>
+  </section>
+  <!-- OOP  -->
+  <section class="main-section" id="OOP">
+    <header>OOP</header>
+    <article>
+      <p>
+        <strong>Classes</strong>
+        <br>
+        We have previously looked at two paradigms of programming - imperative (using statements, loops, and functions as subroutines), and functional (using pure functions, higher-order functions, and recursion).
+        Another very popular paradigm is object-oriented programming (OOP).
+        Objects are created using classes, which are actually the focal point of OOP.
+        The class describes what the object will be, but is separate from the object itself. In other words, a class can be described as an object's blueprint, description, or definition.
+        You can use the same class as a blueprint for creating multiple different objects.
+        Classes are created using the keyword class and an indented block, which contains class methods (which are functions).
+        Below is an example of a simple class and its objects.
+        <br>
+        For example:
+        <code>class Cat:
+          def __init__(self, color, legs):
+          self.color = color
+          self.legs = legs
+
+          felix = Cat("ginger", 4)
+          rover = Cat("dog-colored", 4)
+          stumpy = Cat("brown", 3)</code>
+        This code defines a class named Cat, which has two attributes: color and legs.
+        Then the class is used to create 3 separate objects of that class.
+        Tap Continue to learn more!
+        <strong>__init__</strong>
+        <br>
+        The __init__ method is the most important method in a class.
+        This is called when an instance (object) of the class is created, using the class name as a function.
+        All methods must have self as their first parameter, although it isn't explicitly passed, Python adds the self argument to the list for you; you do not need to include it when you call the methods. Within a method definition, self refers to the instance calling the method.
+        Instances of a class have attributes, which are pieces of data associated with them.
+        In this example, Cat instances have attributes color and legs. These can be accessed by putting a dot, and the attribute name after an instance.
+        In an __init__ method, self.attribute can therefore be used to set the initial value of an instance's attributes.
+        <br>
+        For example:
+        <code>class Cat:
+          def __init__(self, color, legs):
+          self.color = color
+          self.legs = legs
+
+          felix = Cat("ginger", 4)
+          print(felix.color)</code>
+        In the example above, the __init__ method takes two arguments and assigns them to the object's attributes. The __init__ method is called the class constructor.
+        <strong>Methods</strong>
+        <br>
+        Classes can have other methods defined to add functionality to them.
+        Remember, that all methods must have self as their first parameter.
+        These methods are accessed using the same dot syntax as attributes.
+        <br>
+        For example:
+        <code>class Dog:
+          def __init__(self, name, color):
+          self.name = name
+          self.color = color
+
+          def bark(self):
+          print("Woof!")
+
+          fido = Dog("Fido", "brown")
+          print(fido.name)
+          fido.bark()</code>
+        Classes can also have class attributes, created by assigning variables within the body of the class. These can be accessed either from instances of the class, or the class itself.
+        <br>
+        For example:
+        <code>class Dog:
+          legs = 4
+          def __init__(self, name, color):
+          self.name = name
+          self.color = color
+
+          fido = Dog("Fido", "brown")
+          print(fido.legs)
+          print(Dog.legs)</code>
+        Class attributes are shared by all instances of the class.
+        <strong>Classes</strong>
+        <br>
+        Trying to access an attribute of an instance that isn't defined causes an AttributeError. This also applies when you call an undefined method.
+        <br>
+        For example:
+        <code>class Rectangle:
+          def __init__(self, width, height):
+          self.width = width
+          self.height = height
+
+          rect = Rectangle(7, 8)
+          print(rect.color)</code>
+        Run the code and see how it works!
+      </p>
+      <p>
+        <strong>Inheritance</strong>
+        <br>
+        Inheritance provides a way to share functionality between classes.
+        Imagine several classes, Cat, Dog, Rabbit and so on. Although they may differ in some ways (only Dog might have the method bark), they are likely to be similar in others (all having the attributes color and name).
+        This similarity can be expressed by making them all inherit from a superclass Animal, which contains the shared functionality.
+        To inherit a class from another class, put the superclass name in parentheses after the class name.
+        <br>
+        For example:
+        <code>class Animal:
+          def __init__(self, name, color):
+          self.name = name
+          self.color = color
+
+          class Cat(Animal):
+          def purr(self):
+          print("Purr...")
+
+          class Dog(Animal):
+          def bark(self):
+          print("Woof!")
+
+          fido = Dog("Fido", "brown")
+          print(fido.color)
+          fido.bark()</code>
+        Run the code and see how it works!
+        <br>
+        A class that inherits from another class is called a subclass.
+        A class that is inherited from is called a superclass.
+        If a class inherits from another with the same attributes or methods, it overrides them.
+        <br>
+        For example:
+        <code>class Wolf:
+          def __init__(self, name, color):
+          self.name = name
+          self.color = color
+
+          def bark(self):
+          print("Grr...")
+
+          class Dog(Wolf):
+          def bark(self):
+          print("Woof")
+
+          husky = Dog("Max", "grey")
+          husky.bark()</code>
+        In the example above, Wolf is the superclass, Dog is the subclass.
+        <br>
+        Inheritance can also be indirect. One class can inherit from another, and that class can inherit from a third class.
+        <br>
+        For example:
+        <code>class A:
+          def method(self):
+          print("A method")
+
+          class B(A):
+          def another_method(self):
+          print("B method")
+
+          class C(B):
+          def third_method(self):
+          print("C method")
+
+          c = C()
+          c.method()
+          c.another_method()
+          c.third_method()</code>
+        However, circular inheritance is not possible.
+        <br>
+        The function super is a useful inheritance-related function that refers to the parent class. It can be used to find the method with a certain name in an object's superclass.
+        <br>
+        For example:
+        <code>class A:
+          def spam(self):
+          print(1)
+
+          class B(A):
+          def spam(self):
+          print(2)
+          super().spam()
+
+          B().spam()</code>
+        super().spam() calls the spam method of the superclass.
+      </p>
+      <p>
+        <strong>Magic Methods & Operator Overloading
+          Magic Methods
+        </strong>
+        <br>
+        Magic methods are special methods which have double underscores at the beginning and end of their names.
+        They are also known as dunders.
+        So far, the only one we have encountered is __init__, but there are several others.
+        They are used to create functionality that can't be represented as a normal method.
+        One common use of them is operator overloading.
+        This means defining operators for custom classes that allow operators such as + and * to be used on them.
+        An example magic method is __add__ for +.
+        <br>
+        For example:
+        <code>class Vector2D:
+          def __init__(self, x, y):
+          self.x = x
+          self.y = y
+          def __add__(self, other):
+          return Vector2D(self.x + other.x, self.y + other.y)
+
+          first = Vector2D(5, 7)
+          second = Vector2D(3, 9)
+          result = first + second
+          print(result.x)
+          print(result.y)</code>
+        The __add__ method allows for the definition of a custom behavior for the + operator in our class.
+        As you can see, it adds the corresponding attributes of the objects and returns a new object, containing the result.
+        Once it's defined, we can add two objects of the class together.
+        <br>
+        More magic methods for common operators:
+        __sub__ for -
+        __mul__ for *
+        __truediv__ for /
+        __floordiv__ for //
+        __mod__ for %
+        __pow__ for **
+        __and__ for &
+        __xor__ for ^
+        __or__ for |
+
+        The expression x + y is translated into x.__add__(y).
+        However, if x hasn't implemented __add__, and x and y are of different types, then y.__radd__(x) is called.
+        There are equivalent r methods for all magic methods just mentioned.
+        <br>
+        For example:
+        <code>class SpecialString:
+          def __init__(self, cont):
+          self.cont = cont
+
+          def __truediv__(self, other):
+          line = "=" * len(other.cont)
+          return "\n".join([self.cont, line, other.cont])
+
+          spam = SpecialString("spam")
+          hello = SpecialString("Hello world!")
+          print(spam / hello)</code>
+        In the example above, we defined the division operation for our class SpecialString.
+        <br>
+        Python also provides magic methods for comparisons.
+        __lt__ for < __le__ for <=__eq__ for==__ne__ for !=__gt__ for>
+          __ge__ for >=
+          If __ne__ is not implemented, it returns the opposite of __eq__.
+          There are no other relationships between the other operators.
+          <br>
+          For example:
+          <code>class SpecialString:
+            def __init__(self, cont):
+            self.cont = cont
+
+            def __gt__(self, other):
+            for index in range(len(other.cont)+1):
+            result = other.cont[:index] + ">" + self.cont
+            result += ">" + other.cont[index:]
+            print(result)
+
+            spam = SpecialString("spam")
+            eggs = SpecialString("eggs")
+            spam > eggs</code>
+          As you can see, you can define any custom behavior for the overloaded operators.
+          <br>
+          There are several magic methods for making classes act like containers.
+          __len__ for len()
+          __getitem__ for indexing
+          __setitem__ for assigning to indexed values
+          __delitem__ for deleting indexed values
+          __iter__ for iteration over objects (e.g., in for loops)
+          __contains__ for in
+
+          There are many other magic methods that we won't cover here, such as __call__ for calling objects as functions, and __int__, __str__, and the like, for converting objects to built-in types.
+          <br>
+          For example:
+          <code>import random
+
+            class VagueList:
+            def __init__(self, cont):
+            self.cont = cont
+
+            def __getitem__(self, index):
+            return self.cont[index + random.randint(-1, 1)]
+
+            def __len__(self):
+            return random.randint(0, len(self.cont)*2)
+
+            vague_list = VagueList(["A", "B", "C", "D", "E"])
+            print(len(vague_list))
+            print(len(vague_list))
+            print(vague_list[2])
+            print(vague_list[2])</code>
+          We have overridden the len() function for the class VagueList to return a random number.
+          The indexing function also returns a random item in a range from the list, based on the expression.
+      </p>
+      <p>
+        <strong>Object Lifecycle</strong>
+        <br>
+        The lifecycle of an object is made up of its creation, manipulation, and destruction.
+        The first stage of the life-cycle of an object is the definition of the class to which it belongs.
+        The next stage is the instantiation of an instance, when __init__ is called. Memory is allocated to store the instance. Just before this occurs, the __new__ method of the class is called. This is usually overridden only in special cases.
+        After this has happened, the object is ready to be used.
+        Other code can then interact with the object, by calling functions on it and accessing its attributes.
+        Eventually, it will finish being used, and can be destroyed.
+        <br>
+        When an object is destroyed, the memory allocated to it is freed up, and can be used for other purposes.
+        Destruction of an object occurs when its reference count reaches zero. Reference count is the number of variables and other elements that refer to an object.
+        If nothing is referring to it (it has a reference count of zero) nothing can interact with it, so it can be safely deleted.
+        In some situations, two (or more) objects can be referred to by each other only, and therefore can be deleted as well.
+        The del statement reduces the reference count of an object by one, and this often leads to its deletion.
+        The magic method for the del statement is __del__.
+        The process of deleting objects when they are no longer needed is called garbage collection.
+        In summary, an object's reference count increases when it is assigned a new name or placed in a container (list, tuple, or dictionary). The object's reference count decreases when it's deleted with del, its reference is reassigned, or its reference goes out of scope. When an object's reference count reaches zero, Python automatically deletes it.
+        <br>
+        For example:
+        <code>a = 42 # Create object <42>
+            b = a # Increase ref. count of <42>
+              c = [a] # Increase ref. count of <42>
+
+                del a # Decrease ref. count of <42>
+                  b = 100 # Decrease ref. count of <42>
+                    c[0] = -1 # Decrease ref. count of <42></code>
+        Lower level languages like C don't have this kind of automatic memory management.
+      </p>
+      <p>
+        <strong>Data Hiding</strong>
+        <br>
+        A key part of object-oriented programming is encapsulation, which involves packaging of related variables and functions into a single easy-to-use object - an instance of a class.
+        A related concept is data hiding, which states that implementation details of a class should be hidden, and a clean standard interface be presented for those who want to use the class.
+        In other programming languages, this is usually done with private methods and attributes, which block external access to certain methods and attributes in a class.
+        The Python philosophy is slightly different. It is often stated as "we are all consenting adults here", meaning that you shouldn't put arbitrary restrictions on accessing parts of a class. Hence there are no ways of enforcing a method or attribute be strictly private.
+        However, there are ways to discourage people from accessing parts of a class, such as by denoting that it is an implementation detail, and should be used at their own risk.
+        <br>
+        Weakly private methods and attributes have a single underscore at the beginning.
+        This signals that they are private, and shouldn't be used by external code. However, it is mostly only a convention, and does not stop external code from accessing them.
+        Its only actual effect is that from module_name import * won't import variables that start with a single underscore.
+        <br>
+        For example:
+        <code>class Queue:
+          def __init__(self, contents):
+          self._hiddenlist = list(contents)
+
+          def push(self, value):
+          self._hiddenlist.insert(0, value)
+
+          def pop(self):
+          return self._hiddenlist.pop(-1)
+
+          def __repr__(self):
+          return "Queue({})".format(self._hiddenlist)
+
+          queue = Queue([1, 2, 3])
+          print(queue)
+          queue.push(0)
+          print(queue)
+          queue.pop()
+          print(queue)
+          print(queue._hiddenlist)</code>
+        In the code above, the attribute _hiddenlist is marked as private, but it can still be accessed in the outside code.
+        he __repr__ magic method is used for string representation of the instance.
+        <br>
+        Strongly private methods and attributes have a double underscore at the beginning of their names. This causes their names to be mangled, which means that they can't be accessed from outside the class.
+        The purpose of this isn't to ensure that they are kept private, but to avoid bugs if there are subclasses that have methods or attributes with the same names.
+        Name mangled methods can still be accessed externally, but by a different name. The method __privatemethod of class Spam could be accessed externally with _Spam__privatemethod.
+        <br>
+        For example:
+        <code>class Spam:
+          __egg = 7
+          def print_egg(self):
+          print(self.__egg)
+
+          s = Spam()
+          s.print_egg()
+          print(s._Spam__egg)
+          print(s.__egg)</code>
+        Basically, Python protects those members by internally changing the name to include the class name.
+      </p>
+      <p>
+        <strong>Class & Static Methods
+          Class Methods</strong>
+        <br>
+        Methods of objects we've looked at so far are called by an instance of a class, which is then passed to the self parameter of the method.
+        Class methods are different - they are called by a class, which is passed to the cls parameter of the method.
+        A common use of these are factory methods, which instantiate an instance of a class, using different parameters than those usually passed to the class constructor.
+        Class methods are marked with a classmethod decorator.
+        <br>
+        For example:
+        <code>class Rectangle:
+          def __init__(self, width, height):
+          self.width = width
+          self.height = height
+
+          def calculate_area(self):
+          return self.width * self.height
+
+          @classmethod
+          def new_square(cls, side_length):
+          return cls(side_length, side_length)
+
+          square = Rectangle.new_square(5)
+          print(square.calculate_area())</code>
+        new_square is a class method and is called on the class, rather than on an instance of the class. It returns a new object of the class cls.
+        Technically, the parameters self and cls are just conventions; they could be changed to anything else. However, they are universally followed, so it is wise to stick to using them.
+        <strong>Static Methods</strong>
+        <br>
+        Static methods are similar to class methods, except they don't receive any additional arguments; they are identical to normal functions that belong to a class.
+        They are marked with the staticmethod decorator.
+        <br>
+        For example:
+        <code>class Pizza:
+          def __init__(self, toppings):
+          self.toppings = toppings
+
+          @staticmethod
+          def validate_topping(topping):
+          if topping == "pineapple":
+          raise ValueError("No pineapples!")
+          else:
+          return True
+
+          ingredients = ["cheese", "onions", "spam"]
+          if all(Pizza.validate_topping(i) for i in ingredients):
+          pizza = Pizza(ingredients)</code>
+        Static methods behave like plain functions, except for the fact that you can call them from an instance of the class.
+      </p>
+      <p>
+        <strong>Properties</strong>
+        <br>
+        Properties provide a way of customizing access to instance attributes.
+        They are created by putting the property decorator above a method, which means when the instance attribute with the same name as the method is accessed, the method will be called instead.
+        One common use of a property is to make an attribute read-only.
+        <br>
+        For example:
+        <code>class Pizza:
+          def __init__(self, toppings):
+          self.toppings = toppings
+
+          @property
+          def pineapple_allowed(self):
+          return False
+
+          pizza = Pizza(["cheese", "tomato"])
+          print(pizza.pineapple_allowed)
+          pizza.pineapple_allowed = True</code>
+        Run the code and see how it works!
+        <br>
+        Properties can also be set by defining setter/getter functions.
+        The setter function sets the corresponding property's value.
+        The getter gets the value.
+        To define a setter, you need to use a decorator of the same name as the property, followed by a dot and the setter keyword.
+        The same applies to defining getter functions.
+        <br>
+        For example:
+        <code>class Pizza:
+          def __init__(self, toppings):
+          self.toppings = toppings
+          self._pineapple_allowed = False
+
+          @property
+          def pineapple_allowed(self):
+          return self._pineapple_allowed
+
+          @pineapple_allowed.setter
+          def pineapple_allowed(self, value):
+          if value:
+          password = input("Enter the password: ")
+          if password == "Sw0rdf1sh!":
+          self._pineapple_allowed = value
+          else:
+          raise ValueError("Alert! Intruder!")
+
+          pizza = Pizza(["cheese", "tomato"])
+          print(pizza.pineapple_allowed)
+          pizza.pineapple_allowed = True
+          print(pizza.pineapple_allowed)</code>
+        Run the code and see how it works!
+      </p>
+      <p>
+        <strong>A Simple Game</strong>
+        <br>
+        Object-orientation is very useful when managing different objects and their relations. That is especially useful when you are developing games with different characters and features.
+        Let's look at an example project that shows how classes are used in game development.
+        The game to be developed is an old fashioned text-based adventure game.
+        Below is the function handling input and simple parsing.
+        <br>
+        For example:
+        <code>def get_input():
+          command = input(": ").split()
+          verb_word = command[0]
+          if verb_word in verb_dict:
+          verb = verb_dict[verb_word]
+          else:
+          print("Unknown verb {}". format(verb_word))
+          return
+
+          if len(command) >= 2:
+          noun_word = command[1]
+          print (verb(noun_word))
+          else:
+          print(verb("nothing"))
+
+          def say(noun):
+          return 'You said "{}"'.format(noun)
+
+          verb_dict = {
+          "say": say,
+          }
+
+          while True:
+          get_input()</code>
+        The code above takes input from the user, and tries to match the first word with a command in verb_dict. If a match is found, the corresponding function is called.
+      </p>
+    </article>
+  </section>
+  <!-- Regular Expressions  -->
+  <section class="main-section" id="Regular Expressions">
+    <header>Regular Expressions</header>
+    <article>
+      <p>
+        <strong>Regular Expressions</strong>
+        <br>
+        Regular expressions are a powerful tool for various kinds of string manipulation.
+        They are a domain specific language (DSL) that is present as a library in most modern programming languages, not just Python.
+        They are useful for two main tasks:
+        - verifying that strings match a pattern (for instance, that a string has the format of an email address),
+        - performing substitutions in a string (such as changing all American spellings to British ones).
+
+        Domain specific languages are highly specialized mini programming languages.
+        Regular expressions are a popular example, and SQL (for database manipulation) is another.
+        Private domain-specific languages are often used for specific industrial purposes.
+        <br>
+        Regular expressions in Python can be accessed using the re module, which is part of the standard library.
+        After you've defined a regular expression, the re.match function can be used to determine whether it matches at the beginning of a string.
+        If it does, match returns an object representing the match, if not, it returns None.
+        To avoid any confusion while working with regular expressions, we would use raw strings as r"expression".
+        Raw strings don't escape anything, which makes use of regular expressions easier.
+        <br>
+        For example:
+        <code>import re
+          pattern = r"spam"
+          if re.match(pattern, "spamspamspam"):
+          print("Match")
+          else:
+          print("No match")</code>
+        The above example checks if the pattern "spam" matches the string and prints "Match" if it does.
+        Here the pattern is a simple word, but there are various characters, which would have special meaning when they are used in a regular expression.
+        <br>
+        Other functions to match patterns are re.search and re.findall.
+        The function re.search finds a match of a pattern anywhere in the string.
+        The function re.findall returns a list of all substrings that match a pattern.
+        <br>
+        For example:
+        <code>import re
+          pattern = r"spam"
+          if re.match(pattern, "eggspamsausagespam"):
+          print("Match")
+          else:
+          print("No match")
+          if re.search(pattern, "eggspamsausagespam"):
+          print("Match")
+          else:
+          print("No match")
+          print(re.findall(pattern, "eggspamsausagespam"))</code>
+        In the example above, the match function did not match the pattern, as it looks at the beginning of the string.
+        The search function found a match in the string.
+        The function re.finditer does the same thing as re.findall, except it returns an iterator, rather than a list.
+        <br>
+        The regex search returns an object with several methods that give details about it.
+        These methods include group which returns the string matched, start and end which return the start and ending positions of the first match, and span which returns the start and end positions of the first match as a tuple.
+        <br>
+        For example:
+        <code>import re
+          pattern = r"pam"
+          match = re.search(pattern, "eggspamsausage")
+          if match:
+          print(match.group())
+          print(match.start())
+          print(match.end())
+          print(match.span())</code>
+        Run the code and see how it works!
+        <br>
+        <strong>Search & Replace</strong>
+        <br>
+        One of the most important re methods that use regular expressions is sub.
+        Syntax:
+        <br>
+        For example:
+        <code>re.sub(pattern, repl, string, count=0)</code>
+        This method replaces all occurrences of the pattern in string with repl, substituting all occurrences, unless count provided. This method returns the modified string.
+        <br>
+        For example:
+        <code>import re
+          str = "My name is David. Hi David."
+          pattern = r"David"
+          newstr = re.sub(pattern, "Amy", str)
+          print(newstr)</code>
+        Run the code and see how it works!
+      </p>
+      <p>
+        <strong>Simple Metacharacters
+          <br>
+          Metacharacters
+        </strong>
+        <br>
+        Metacharacters are what make regular expressions more powerful than normal string methods.
+        They allow you to create regular expressions to represent concepts like "one or more repetitions of a vowel".
+
+        The existence of metacharacters poses a problem if you want to create a regular expression (or regex) that matches a literal metacharacter, such as "$". You can do this by escaping the metacharacters by putting a backslash in front of them.
+        However, this can cause problems, since backslashes also have an escaping function in normal Python strings. This can mean putting three or four backslashes in a row to do all the escaping.
+        To avoid this, you can use a raw string, which is a normal string with an "r" in front of it. We saw usage of raw strings in the previous lesson.
+        <br>
+        The first metacharacter we will look at is . (dot).
+        This matches any character, other than a new line.
+        <br>
+        For example:
+        <code>import re
+          pattern = r"gr.y"
+          if re.match(pattern, "grey"):
+          print("Match 1")
+          if re.match(pattern, "gray"):
+          print("Match 2")
+          if re.match(pattern, "blue"):
+          print("Match 3")</code>
+        Run the code and see how it works!
+        <br>
+        The next two metacharacters are ^ and $.
+        These match the start and end of a string, respectively.
+        <br>
+        For example:
+        <code>import re
+          pattern = r"^gr.y$"
+          if re.match(pattern, "grey"):
+          print("Match 1")
+          if re.match(pattern, "gray"):
+          print("Match 2")
+          if re.match(pattern, "stingray"):
+          print("Match 3")</code>
+        The pattern "^gr.y$" means that the string should start with gr, then follow with any character, except a newline, and end with y.
+      </p>
+      <p>
+        <strong>Character Classes</strong>
+        <br>
+        Character classes provide a way to match only one of a specific set of characters.
+        A character class is created by putting the characters it matches inside square brackets.
+        <br>
+        For example:
+        <code>import re
+          pattern = r"[aeiou]"
+          if re.search(pattern, "grey"):
+          print("Match 1")
+          if re.search(pattern, "qwertyuiop"):
+          print("Match 2")
+          if re.search(pattern, "rhythm myths"):
+          print("Match 3")</code>
+        The pattern [aeiou] in the search function matches all strings that contain any one of the characters defined.
+        <br>
+        Character classes can also match ranges of characters.
+        Some examples:
+        The class [a-z] matches any lowercase alphabetic character.
+        The class [G-P] matches any uppercase character from G to P.
+        The class [0-9] matches any digit.
+        Multiple ranges can be included in one class. For example, [A-Za-z] matches a letter of any case.
+        <br>
+        For example:
+        <code>import re
+          pattern = r"[A-Z][A-Z][0-9]"
+          if re.search(pattern, "LS8"):
+          print("Match 1")
+          if re.search(pattern, "E3"):
+          print("Match 2")
+          if re.search(pattern, "1ab"):
+          print("Match 3")</code>
+        The pattern in the example above matches strings that contain two alphabetic uppercase letters followed by a digit.
+        <br>
+        Place a ^ at the start of a character class to invert it.
+        This causes it to match any character other than the ones included.
+        Other metacharacters such as $ and ., have no meaning within character classes.
+        The metacharacter ^ has no meaning unless it is the first character in a class.
+        <br>
+        For example:
+        <code>import re
+          pattern = r"[^A-Z]"
+          if re.search(pattern, "this is all quiet"):
+          print("Match 1")
+          if re.search(pattern, "AbCdEfG123"):
+          print("Match 2")
+          if re.search(pattern, "THISISALLSHOUTING"):
+          print("Match 3")</code>
+        The pattern [^A-Z] excludes uppercase strings.
+        Note, that the ^ should be inside the brackets to invert the character class.
+      </p>
+      <p>
+        <strong>More Metacharacters</strong>
+        <br>
+        Some more metacharacters are * + ? { and }.
+        These specify numbers of repetitions.
+        The metacharacter * means "zero or more repetitions of the previous thing". It tries to match as many repetitions as possible. The "previous thing" can be a single character, a class, or a group of characters in parentheses.
+        <br>
+        For example:
+        <code>import re
+          pattern = r"egg(spam)*"
+          if re.match(pattern, "egg"):
+          print("Match 1")
+          if re.match(pattern, "eggspamspamegg"):
+          print("Match 2")
+          if re.match(pattern, "spam"):
+          print("Match 3")</code>
+        The example above matches strings that start with "egg" and follow with zero or more "spam"s.
+        <br>
+        The metacharacter + is very similar to *, except it means "one or more repetitions", as opposed to "zero or more repetitions".
+        <br>
+        For example:
+        <code>import re
+          pattern = r"g+"
+          if re.match(pattern, "g"):
+          print("Match 1")
+          if re.match(pattern, "gggggggggggggg"):
+          print("Match 2")
+          if re.match(pattern, "abc"):
+          print("Match 3")</code>
+        To summarize:
+        * matches 0 or more occurrences of the preceding expression.
+        + matches 1 or more occurrence of the preceding expression.
+        <br>
+        The metacharacter ? means "zero or one repetitions".
+        <br>
+        For example:
+        <code>import re
+          pattern = r"ice(-)?cream"
+          if re.match(pattern, "ice-cream"):
+          print("Match 1")
+          if re.match(pattern, "icecream"):
+          print("Match 2")
+          if re.match(pattern, "sausages"):
+          print("Match 3")
+          if re.match(pattern, "ice--ice"):
+          print("Match 4")</code>
+        Run the code and see how it works!
+        <br>
+        <strong>Curly Braces</strong>
+        <br>
+        Curly braces can be used to represent the number of repetitions between two numbers.
+        The regex {x,y} means "between x and y repetitions of something".
+        Hence {0,1} is the same thing as ?.
+        If the first number is missing, it is taken to be zero. If the second number is missing, it is taken to be infinity.
+        <br>
+        For example:
+        <code>import re
+          pattern = r"9{1,3}$"
+          if re.match(pattern, "9"):
+          print("Match 1")
+          if re.match(pattern, "999"):
+          print("Match 2")
+          if re.match(pattern, "9999"):
+          print("Match 3")</code>
+        "9{1,3}$" matches string that have 1 to 3 nines.
+      </p>
+      <p>
+        <strong>Groups</strong>
+        <br>
+        A group can be created by surrounding part of a regular expression with parentheses.
+        This means that a group can be given as an argument to metacharacters such as * and ?.
+        <br>
+        For example:
+        <code>import re
+          pattern = r"egg(spam)*"
+          if re.match(pattern, "egg"):
+          print("Match 1")
+          if re.match(pattern, "eggspamspamspamegg"):
+          print("Match 2")
+          if re.match(pattern, "spam"):
+          print("Match 3")</code>
+        (spam) represents a group in the example pattern shown above.
+        Run the code and see how it works!
+        <br>
+        The content of groups in a match can be accessed using the group function.
+        A call of group(0) or group() returns the whole match.
+        A call of group(n), where n is greater than 0, returns the nth group from the left.
+        The method groups() returns all groups up from 1.
+        <br>
+        For example:
+        <code>import re
+          pattern = r"a(bc)(de)(f(g)h)i"
+          match = re.match(pattern, "abcdefghijklmnop")
+          if match:
+          print(match.group())
+          print(match.group(0))
+          print(match.group(1))
+          print(match.group(2))
+          print(match.groups())</code>
+        As you can see from the example above, groups can be nested.
+        <br>
+        There are several kinds of special groups.
+        Two useful ones are named groups and non-capturing groups.
+        Named groups have the format (?P<name>...), where name is the name of the group, and ... is the content. They behave exactly the same as normal groups, except they can be accessed by group(name) in addition to its number.
+          Non-capturing groups have the format (?:...). They are not accessible by the group method, so they can be added to an existing regular expression without breaking the numbering.
+          <br>
+          For example:
+          <code>import re
+            pattern = r"(?P<first>abc)(?:def)(ghi)"
+              match = re.match(pattern, "abcdefghi")
+              if match:
+              print(match.group("first"))
+              print(match.groups())</code>
+          Run the code and see how it works!
+          <br>
+          <strong>Metacharacters</strong>
+          <br>
+          Another important metacharacter is |.
+          This means "or", so red|blue matches either "red" or "blue".
+          <br>
+          For example:
+          <code>import re
+            pattern = r"gr(a|e)y"
+            match = re.match(pattern, "gray")
+            if match:
+            print ("Match 1")
+            match = re.match(pattern, "grey")
+            if match:
+            print ("Match 2")
+            match = re.match(pattern, "griy")
+            if match:
+            print ("Match 3")</code>
+          Run the code and see how it works!
+      </p>
+      <p>
+        <strong>Special Sequences</strong>
+        <br>
+        There are various special sequences you can use in regular expressions. They are written as a backslash followed by another character.
+        One useful special sequence is a backslash and a number between 1 and 99, e.g., \1 or \17. This matches the expression of the group of that number.
+        <br>
+        For example:
+        <code>import re
+          pattern = r"(.+) \1"
+          match = re.match(pattern, "word word")
+          if match:
+          print ("Match 1")
+          match = re.match(pattern, "?! ?!")
+          if match:
+          print ("Match 2")
+          match = re.match(pattern, "abc cde")
+          if match:
+          print ("Match 3")</code>
+        Note, that "(.+) \1" is not the same as "(.+) (.+)", because \1 refers to the first group's subexpression, which is the matched expression itself, and not the regex pattern.
+        <br>
+        More useful special sequences are \d, \s, and \w.
+        These match digits, whitespace, and word characters respectively.
+        In ASCII mode they are equivalent to [0-9], [ \t\n\r\f\v], and [a-zA-Z0-9_].
+        In Unicode mode they match certain other characters, as well. For instance, \w matches letters with accents.
+        Versions of these special sequences with upper case letters - \D, \S, and \W - mean the opposite to the lower-case versions. For instance, \D matches anything that isn't a digit.
+        <br>
+        For example:
+        <code>import re
+          pattern = r"(\D+\d)"
+          match = re.match(pattern, "Hi 999!")
+          if match:
+          print("Match 1")
+          match = re.match(pattern, "1, 23, 456!")
+          if match:
+          print("Match 2")
+          match = re.match(pattern, " ! $?")
+          if match:
+          print("Match 3")</code>
+        (\D+\d) matches one or more non-digits followed by a digit.
+        <br>
+        Additional special sequences are \A, \Z, and \b.
+        The sequences \A and \Z match the beginning and end of a string, respectively.
+        The sequence \b matches the empty string between \w and \W characters, or \w characters and the beginning or end of the string. Informally, it represents the boundary between words.
+        The sequence \B matches the empty string anywhere else.
+        <br>
+        For example:
+        <code>import re
+          pattern = r"\b(cat)\b"
+          match = re.search(pattern, "The cat sat!")
+          if match:
+            print ("Match 1")
+          <!--match = re.search(pattern, "We s>cat<tered?")--> 
+          if match: 
+            print ("Match 2") 
+          match = re.search(pattern, "We scattered." ) 
+            if match: 
+            print ("Match 3")
+        </code>                                                  
+       <br>
+       \b(cat)\b" basically matches the word "cat" surrounded by word boundaries.
+      </p>
+      <p>
+        <strong>Email Extraction</strong>
+        <br>
+        To demonstrate a sample usage of regular expressions, lets create a program to extract email addresses from a string.
+        Suppose we have a text that contains an email address:
+        <br>
+        For example:
+        <code>str = "Please contact info@sololearn.com for assistance"</code>
+        Our goal is to extract the substring "info@sololearn.com".
+        A basic email address consists of a word and may include dots or dashes. This is followed by the @ sign and the domain name (the name, a dot, and the domain name suffix).
+        This is the basis for building our regular expression.
+        <br>
+        For example:
+        <code>pattern = r"([\w\.-]+)@([\w\.-]+)(\.[\w\.]+)"</code>
+        [\w\.-]+ matches one or more word character, dot or dash.
+        The regex above says that the string should contain a word (with dots and dashes allowed), followed by the @ sign, then another similar word, then a dot and another word.
+        Our regex contains three groups:
+        1 - first part of the email address.
+        2 - domain name without the suffix.
+        3 - the domain suffix.
+        <br>
+        Putting it all together:
+        <br>
+        For example:
+        <code>import re
+
+          pattern = r"([\w\.-]+)@([\w\.-]+)(\.[\w\.]+)"
+          str = "Please contact info@sololearn.com for assistance"
+
+          match = re.search(pattern, str)
+          if match:
+          print(match.group())</code>
+        In case the string contains multiple email addresses, we could use the re.findall method instead of re.search, to extract all email addresses.
+        The regex in this example is for demonstration purposes only.
+        A much more complex regex is required to fully validate an email address.
+      </p>
+    </article>
+  </section>
+  <!-- Pythonicness & Packaging  -->
+  <section class="main-section" id="Pythonicness & Packaging">
+    <header>Pythonicness & Packaging</header>
+    <article>
+      <p>
+        <strong>The Zen of Python</strong>
+        <br>
+        Writing programs that actually do what they are supposed to do is just one component of being a good Python programmer.
+        It's also important to write clean code that is easily understood, even weeks after you've written it.
+
+        One way of doing this is to follow the Zen of Python, a somewhat tongue-in-cheek set of principles that serves as a guide to programming the Pythoneer way. Use the following code to access the Zen of Python.
+        <br>
+        For example:
+        <code>import this</code>
+        Run the code and see how it works!
+        <br>
+        Some lines in the Zen of Python may need more explanation.
+        Explicit is better than implicit: It is best to spell out exactly what your code is doing. This is why adding a numeric string to an integer requires explicit conversion, rather than having it happen behind the scenes, as it does in other languages.
+        Flat is better than nested: Heavily nested structures (lists of lists, of lists, and on and on…) should be avoided.
+        Errors should never pass silently: In general, when an error occurs, you should output some sort of error message, rather than ignoring it.
+        There are 20 principles in the Zen of Python, but only 19 lines of text.
+        The 20th principle is a matter of opinion, but our interpretation is that the blank line means "Use whitespace".
+        The line "There should be one - and preferably only one - obvious way to do it" references and contradicts the Perl language philosophy that there should be more than one way to do it.
+      </p>
+      <p>
+        <strong>PEP</strong>
+        <br>
+        Python Enhancement Proposals (PEP) are suggestions for improvements to the language, made by experienced Python developers.
+        PEP 8 is a style guide on the subject of writing readable code. It contains a number of guidelines in reference to variable names, which are summarized here:
+        - modules should have short, all-lowercase names;
+        - class names should be in the CapWords style;
+        - most variables and function names should be lowercase_with_underscores;
+        - constants (variables that never change value) should be CAPS_WITH_UNDERSCORES;
+        - names that would clash with Python keywords (such as 'class' or 'if') should have a trailing underscore.
+
+        PEP 8 also recommends using spaces around operators and after commas to increase readability.
+        However, whitespace should not be overused. For instance, avoid having any space directly inside any type of brackets.
+        <br>
+        Other PEP 8 suggestions include the following:
+        - lines shouldn't be longer than 80 characters;
+        - 'from module import *' should be avoided;
+        - there should only be one statement per line.
+
+        It also suggests that you use spaces, rather than tabs, to indent. However, to some extent, this is a matter of personal preference. If you use spaces, only use 4 per line. It's more important to choose one and stick to it.
+        The most important advice in the PEP is to ignore it when it makes sense to do so. Don't bother with following PEP suggestions when it would cause your code to be less readable; inconsistent with the surrounding code; or not backwards compatible.
+        However, by and large, following PEP 8 will greatly enhance the quality of your code.
+        Some other notable PEPs that cover code style:
+        PEP 20: The Zen of Python
+        PEP 257: Style Conventions for Docstrings
+      </p>
+      <p>
+        <strong>Tuple Unpacking</strong>
+        <br>
+        Tuple unpacking allows you to assign each item in an iterable (often a tuple) to a variable.
+        <br>
+        For example:
+        <code>numbers = (1, 2, 3)
+          a, b, c = numbers
+          print(a)
+          print(b)
+          print(c)</code>
+        This can be also used to swap variables by doing a, b = b, a , since b, a on the right hand side forms the tuple (b, a) which is then unpacked.
+        <br>
+        A variable that is prefaced with an asterisk (*) takes all values from the iterable that are left over from the other variables.
+        <br>
+        For example:
+        <code>a, b, *c, d = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+          print(a)
+          print(b)
+          print(c)
+          print(d)</code>
+        Run the code and see how it works!
+      </p>
+      <p>
+        <strong>Ternary Operator</strong>
+        <br>
+        Conditional expressions provide the functionality of if statements while using less code. They shouldn't be overused, as they can easily reduce readability, but they are often useful when assigning variables.
+        Conditional expressions are also known as applications of the ternary operator.
+        <br>
+        For example:
+        <code>a = 7
+          b = 1 if a >= 5 else 42
+          print(b)</code>
+        The ternary operator checks the condition and returns the corresponding value.
+        In the example above, as the condition is true, b is assigned 1. If a was less than 5, it would have been assigned 42.
+        <br>
+        For example:
+        <code>status = 1
+          msg = "Logout" if status == 1 else "Login"
+
+          print(msg)</code>
+        The ternary operator is so called because, unlike most operators, it takes three arguments.
+      </p>
+      <p>
+        <strong>More on else Statements
+          else
+        </strong>
+        The else statement is most commonly used along with the if statement, but it can also follow a for or while loop, which gives it a different meaning.
+        With the for or while loop, the code within it is called if the loop finishes normally (when a break statement does not cause an exit from the loop).
+        <br>
+        <code>for i in range(10):
+          if i == 999:
+          break
+          else:
+          print("Unbroken 1")
+
+          for i in range(10):
+          if i == 5:
+          break
+          else:
+          print("Unbroken 2")</code>
+        <br>
+        The first for loop executes normally, resulting in the printing of "Unbroken 1".
+        The second loop exits due to a break, which is why it's else statement is not executed.
+        <br>
+        The else statement can also be used with try/except statements.
+        In this case, the code within it is only executed if no error occurs in the try statement.
+        <code>try:
+          print(1)
+          except ZeroDivisionError:
+          print(2)
+          else:
+          print(3)
+
+          try:
+          print(1/0)
+          except ZeroDivisionError:
+          print(4)
+          else:
+          print(5)</code>
+        Run the code and see how it works!
+      </p>
+      <p>
+        <strong>__main__</strong>
+        <br>
+        Most Python code is either a module to be imported, or a script that does something.
+        However, sometimes it is useful to make a file that can be both imported as a module and run as a script.
+        To do this, place script code inside if __name__ == "__main__".
+        This ensures that it won't be run if the file is imported.
+        <br>
+        For example:
+        <code>def function():
+          print("This is a module function")
+          if __name__=="__main__":
+          print("This is a script")</code>
+        When the Python interpreter reads a source file, it executes all of the code it finds in the file. Before executing the code, it defines a few special variables.
+        For example, if the Python interpreter is running that module (the source file) as the main program, it sets the special __name__ variable to have a value "__main__". If this file is being imported from another module, __name__ will be set to the module's name.
+        <br>
+        If we save the code from our previous example as a file called sololearn.py, we can then import it to another script as a module, using the name sololearn.
+        sololearn.py
+        <br>
+        For example:
+        <code>def function():
+          print("This is a module function")
+
+          if __name__=="__main__":
+          print("This is a script") </code>
+        <br>
+        For example:
+        <code>import sololearn
+
+          sololearn.function()</code>
+        Basically, we've created a custom module called sololearn, and then used it in another script.
+      </p>
+      <p>
+        <strong>Major 3rd-Party Libraries</strong>
+        <br>
+        The Python standard library alone contains extensive functionality.
+        However, some tasks require the use of third-party libraries. Some major third-party libraries:
+        Django: The most frequently used web framework written in Python, Django powers websites that include Instagram and Disqus. It has many useful features, and whatever features it lacks are covered by extension packages.
+        CherryPy and Flask are also popular web frameworks.
+
+        For scraping data from websites, the library BeautifulSoup is very useful, and leads to better results than building your own scraper with regular expressions.
+        While Python does offer modules for programmatically accessing websites, such as urllib, they are quite cumbersome to use. Third-party library requests make it much easier to use HTTP requests.
+        <br>
+        A number of third-party modules are available that make it much easier to carry out scientific and mathematical computing with Python.
+        The module matplotlib allows you to create graphs based on data in Python.
+        The module NumPy allows for the use of multidimensional arrays that are much faster than the native Python solution of nested lists. It also contains functions to perform mathematical operations such as matrix transformations on the arrays.
+        The library SciPy contains numerous extensions to the functionality of NumPy.
+
+        Python can also be used for game development.
+        Usually, it is used as a scripting language for games written in other languages, but it can be used to make games by itself.
+        For 3D games, the library Panda3D can be used. For 2D games, you can use pygame.
+      </p>
+      <p>
+        <strong>Packaging</strong>
+        <br>
+        In Python, the term packaging refers to putting modules you have written in a standard format, so that other programmers can install and use them with ease.
+        This involves use of the modules setuptools and distutils.
+        The first step in packaging is to organize existing files correctly. Place all of the files you want to put in a library in the same parent directory. This directory should also contain a file called __init__.py, which can be blank but must be present in the directory.
+        This directory goes into another directory containing the readme and license, as well as an important file called setup.py.
+        <br>
+        For example:
+        <code>SoloLearn/
+          LICENSE.txt
+          README.txt
+          setup.py
+          sololearn/
+          __init__.py
+          sololearn.py
+          sololearn2.py</code>
+        You can place as many script files in the directory as you need.
+        <br>
+        The next step in packaging is to write the setup.py file.
+        This contains information necessary to assemble the package so it can be uploaded to PyPI and installed with pip (name, version, etc.).
+        <br>
+        For example:
+        <code>from distutils.core import setup
+          setup(
+          name='SoloLearn',
+          version='0.1dev',
+          packages=['sololearn',],
+          license='MIT',
+          long_description=open('README.txt').read(),
+          )</code>
+
+        After creating the setup.py file, upload it to PyPI, or use the command line to create a binary distribution (an executable installer).
+        To build a source distribution, use the command line to navigate to the directory containing setup.py, and run the command python setup.py sdist.
+        Run python setup.py bdist or, for Windows, python setup.py bdist_wininst to build a binary distribution.
+        Use python setup.py register, followed by python setup.py sdist upload to upload a package.
+        Finally, install a package with python setup.py install.
+      </p>
+      <p>
+        <strong>Packaging for Users
+          Packaging
+        </strong>
+        <br>
+        The previous lesson covered packaging modules for use by other Python programmers. However, many computer users who are not programmers do not have Python installed. Therefore, it is useful to package scripts as executable files for the relevant platform, such as the Windows or Mac operating systems. This is not necessary for Linux, as most Linux users do have Python installed, and are able to run scripts as they are.
+        For Windows, many tools are available for converting scripts to executables. For example, py2exe, can be used to package a Python script, along with the libraries it requires, into a single executable.
+        PyInstaller and cx_Freeze serve the same purpose.
+        For Macs, use py2app, PyInstaller or cx_Freeze.
+      </p>
+    </article>
+  </section>
+</main>
+<!-- partial -->
+  
+</body>
+</html>

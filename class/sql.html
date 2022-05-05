@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Oracle SQL Documentation </title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<nav id="navbar">
+    <header>Oracle SQL</header>
+    <ul>
+        <li><a class="nav-link" href="#What_is_SQL?">What is SQL?</a></li>
+        <li><a class="nav-link" href="#How_SQL_Works">How SQL Works</a></li>
+        <li><a class="nav-link" href="#Basic_Elements_of_Oracle_SQL">Basic Elements of Oracle SQL</a></li>
+        <li><a class="nav-link" href="#Datatypes">Datatypes</a></li>
+        <li><a class="nav-link" href="#Literals">Literals</a></li>
+        <li><a class="nav-link" href="#Format_Models">Format Models</a></li>
+        <li><a class="nav-link" href="#Nulls">Nulls</a></li>
+        <li><a class="nav-link" href="#Comments">Comments</a></li>
+        <li><a class="nav-link" href="#Database_Objects">Database Objects</a></li>
+        <li><a class="sub-link" href="#Schema_Objects">Schema Objects</a></li>
+        <li><a class="sub-link" href="#Nonschema_Objects">Nonschema Objects</a></li>
+        <li><a class="nav-link" href="#Schema_Object_Guidelines">Schema Object Guidelines</a></li>
+        <li><a class="sub-link" href="#Schema_Object_Naming_Rules">Schema Object Naming Rules</a></li>
+        <li><a class="sub-link" href="#Schema_Object_Naming_Examples">Schema Object Naming Examples</a></li>
+        <li><a class="sub-link" href="#Schema_Object_Naming_Guidelines">Schema Object Naming Guidelines</a></li>
+        <li><a class="nav-link" href="#Syntax_for_Schema_Objects">Syntax for Schema Objects</a></li>
+        <li><a class="nav-link" href="#References">References</a></li>
+    </ul>
+</nav>
+
+<main id="main-doc">
+    <h1 id="title">Oracle SQL Documentation</h1>
+    <section class="main-section" id="What_is_SQL?">
+        <header>What is SQL?</header>
+        <p>Structured Query Language (SQL) is the set of statements with which all programs and users access data in a database. Application programs and tools often allow users access to the database without using SQL directly, but these applications must support SQL when executing the user's request.</p>
+    </section>
+
+    <section class="main-section" id="How_SQL_Works">
+        <header>How SQL Works</header>
+        <p>SQL differs from general-purpose programming languages like C and BASIC, and is technically a data sublanguage. The strengths of SQL provide benefits for all types of users, including application programmers, database administrators, managers, and end users. Some features include:</p>
+        <ul>
+            <li>Processing sets of data as groups rather than as individual units</li>
+
+            <li>Providing automatic navigation to the data</li>
+
+            <li>Using statements that are complex and powerful individually, and that therefore stand alone</li>
+        </ul>
+        <p>SQL lets you work with data at the logical level. Implementation is only necessary for manipulating the data. For example, to retrieve a set of rows from a table, you define a condition used to filter the rows. In this page, all SQL statements use the optimizer, a part of Oracle Database that determines the most efficient means of accessing the specified data.</p>
+
+        <p>SQL unifies a variety of tasks into one consistent language, including:</p>
+        <ul>
+            <li>Querying data</li>
+
+            <li>Inserting, updating, and deleting rows in a table</li>
+
+            <li>Creating, replacing, altering, and dropping objects</li>
+
+            <li>Controlling access to the database and its objects</li>
+
+            <li>Guaranteeing database consistency and integrity</li>
+        </ul>
+        <p>All major relational database management systems support SQL, so you can transfer all skills you have gained with SQL from one database to another. In addition, all programs written in SQL are portable. They can often be moved from one database to another with very little modification.</p>
+    </section>
+
+    <section class="main-section" id="Basic_Elements_of_Oracle_SQL">
+        <header>Basic Elements of Oracle SQL</header>
+        This section contains reference information on the basic elements of Oracle SQL. These elements are the simplest building blocks of SQL statements:
+        <ul>
+            <li>Datatypes</li>
+            <li>Literals</li>
+            <li>Format Models</li>
+            <li>Nulls</li>
+            <li>Comments</li>
+            <li>Database Objects</li>
+            <li>Schema Object Guidelines</li>
+            <li>Syntax for Schema Objects</li>
+        </ul>
+    </section>
+
+    <section class="main-section" id="Datatypes">
+        <header>Datatypes</header>
+        <p>A datatype is either scalar or nonscalar. A scalar type contains a singular value, whereas a nonscalar type contains a set of values. A large object (known as LOB) is a special scalar datatype representing a large scalar value of either binary or character data.</p>
+        <p>Some datatypes include:</p>
+        <ul>
+            <li>Oracle Built-in Datatypes</li>
+            <li>ANSI, DB2, and SQL/DS Datatypes</li>
+            <li>User-Defined Types</li>
+            <li>Oracle-Supplied Types</li>
+        </ul>
+        <p>Some datatypes may require you to use functions, some with multiple arguments, to define the accuracy of data storage. Let's look at the base function of the <code>NUMBER</code> datatype:</p>
+        <code class="code-block">
+NUMBER(p,s)
+        </code>
+        <p>... where:</p>
+        <ul>
+            <li><code>p</code> is the precision (the total number of significant decimal digits)</li>
+            <li><code>s</code> is the scale (the number of digits from the decimal point to the least significant digit)</li>
+        </ul>
+        <p>Here are some examples displaying the storage of the <code>NUMBER</code> datatype:</p>
+        <code class="code-block">
+// &rarr; User input: 123.45
+NUMBER
+// &larr; Stored as: 123.45
+
+// &rarr; User input: 123.45
+NUMBER(3)
+// &larr; Stored as: 124
+
+// &rarr; User input: 123.45
+NUMBER(6, 2)
+// &larr; Stored as: 123.45
+
+// &rarr; User input: 123.45
+NUMBER(6, 1)
+// &larr; Stored as: 123.5
+
+// &rarr; User input: 123.45
+NUMBER(6, -2)
+// &larr; Stored as: 100
+        </code>
+    </section>
+
+    <section class="main-section" id="Literals">
+        <header>Literals</header>
+        <p>The terms literal and constant value are synonymous and refer to a fixed data value. For example, <code>'JILL'</code>, <code>'BLUE ROCK'</code>, and <code>'404'</code> are all character literals; <code>1010</code> is a numeric literal. Character literals are enclosed in single quotation marks (<code>''</code>) so that Oracle can distinguish them from schema object names.</p>
+        <p>Literal types include the following:</p>
+        <ul>
+            <li>Text Literals</li>
+            <li>Numeric Literals</li>
+            <li>Datetime Literals</li>
+            <li>Interval Literals</li>
+        </ul>
+        <p>Many SQL statements and functions require you to specify character and numeric literal values. You can also specify literals as part of expressions and conditions.</p>
+        <p>Below are several examples of valid literals:</p>
+        <code class="code-block">
+// Text Literals
+'Goodbye'
+'ORACLE.dbs'
+'Jessie''s umbrella'
+'19-APR-98'
+N'nchar literal'
+
+// Numeric Literals
+17
+6.53
++255
+-255
+15e-04
+
+// Datetime Literals
+DATE '1987-12-28'
+TO_DATE('87-DEC-28 19:30','YY-MON-DD HH24:MI')
+
+// Interval Literal
+INTERVAL '123-2' YEAR(3) TO MONTH
+        </code>
+    </section>
+
+    <section class="main-section" id="Format_Models">
+        <header>Format Models</header>
+        <p>A format model is a character literal that describes the format of datetime or numeric data stored in a character string. It's important to note that this does not change the internal representation of the value in the database. Converting a character string into a date or number determines how Oracle Database interprets the string.</p>
+        <p>For example:</p>
+        <ul>
+            <li>The datetime format model for the string <code>'19:30:59'</code> is <code>'HH24:MI:SS'</code>.</li>
+            <li>The datetime format model for the string <code>'12-Dec-1987'</code> is <code>'DD-Mon-YYYY'</code>.</li>
+            <li>The number format model for the string <code>'$1,234.56'</code> is <code>'$9,999.99'</code>.</li>
+        </ul>
+    </section>
+
+    <section class="main-section" id="Nulls">
+        <header>Nulls</header>
+        <p>If a column in a row has no value, then the column is known to be null, or to contain <code>NULL</code>. Use a <code>NULL</code> when the actual value is not known or when a value would not be meaningful.</p>
+        <p>All scalar functions (with a few exceptions) return <code>NULL</code> when given a null argument. In SQL, it is possible to return a value (using the <code>NVL</code> function) when a null occurs. For conditions, a <code>NULL</code> value would act similarly to a <code>FALSE</code> value.</p>
+        <p>Most aggregate functions ignore nulls. For example, consider a query that averages the four values: 2000, <code>NULL</code>, <code>NULL</code>, and 3000. This query ignores the nulls and calculates the average to be (2000+3000)/2 = 2500.</p>
+    </section>
+
+    <section class="main-section" id="Comments">
+        <header>Comments</header>
+        <p>Comments can increase your application's readability and usability. For instance, including a comment in a statement that describes the purpose of the statement within your application can make it easier to understand. With the exception of hints, statement execution is unaffected by SQL comment lines.</p>
+        <p>A comment can appear between any keywords, parameters, or punctuation marks in a statement. There are two ways to include comments:</p>
+        <ul>
+            <li>Begin the comment with a slash and an asterisk (<code>/*</code>). Comments inside this text can span multiple lines. End the comment with an asterisk and a slash (<code>*/</code>). It is not necessary for the opening and terminating characters to be separated from the text by a space or a line break.</li>
+            <li>Begin the comment with two hyphens (<code>--</code>). Comments inside this text cannot extend to a new line. End the comment with a line break.</li>
+        </ul>
+        <p>Be aware that some of the tools used to enter SQL have additional restrictions.</p>
+        <p>Here is an example of an application using both kinds of comments:</p>
+        <code class="code-block">
+SELECT last_name, salary + NVL(commission_pct, 0),
+    job_id, e.department_id
+/* Select all employees whose compensation
+is greater than that of Priscilla.*/
+    FROM employees e, departments d
+        /*The DEPARTMENTS table is used to get the department name.*/
+    WHERE e.department_id = d.department_id
+        AND salary + NVL(commission_pct,0) >          /* Subquery: */
+        (SELECT salary + NVL(commission_pct,0)
+                /* total compensation is salary + commission_pct */
+            FROM employees
+            WHERE last_name = 'Priscilla');
+
+SELECT last_name,                               -- select the name
+        salary + NVL(commission_pct, 0),        -- total compensation
+        job_id,                                 -- job
+        e.department_id                         -- and department
+    FROM employees e,                           -- of all employees
+        departments d
+    WHERE e.department_id = d.department_id
+        AND salary + NVL(commission_pct, 0) >   -- whose compensation
+                                                -- is greater than
+            (SELECT salary + NVL(commission_pct,0)-- the compensation
+        FROM employees
+        WHERE last_name = 'Priscilla');          -- of Priscilla.
+        </code>
+    </section>
+
+    <section class="main-section" id="Database_Objects">
+        <header>Database Objects</header>
+        <p>Oracle Database recognizes objects that are associated with a particular schema and objects that are not associated with a particular schema. They are known as Schema Objects and Nonschema Objects. Names must be provided for most types of database objects when you create them.</p>
+        <section class="sub-section" id="Schema_Objects">
+            <header>Schema Objects</header>
+            <p>A schema is a collection of logical structures of data, or schema objects. A schema inherits the name of the database user, where each user owns a single schema. Schema objects can be created and manipulated with SQL and include the following types of objects:</p>
+            <ul>
+                <li>Clusters</li>
+                <li>Constraints</li>
+                <li>Database links</li>
+                <li>Database triggers</li>
+                <li>Dimensions</li>
+                <li>External procedure libraries</li>
+                <li>Index-organized tables</li>
+                <li>Indexes</li>
+                <li>Indextypes</li>
+                <li>Java classes, Java resources, Java sources</li>
+                <li>Materialized views</li>
+                <li>Materialized view logs</li>
+                <li>Object tables</li>
+                <li>Object types</li>
+                <li>Object views</li>
+                <li>Operators</li>
+                <li>Packages</li>
+                <li>Sequences</li>
+                <li>Stored functions, stored procedures</li>
+                <li>Synonyms</li>
+                <li>Tables</li>
+                <li>Views</li>
+            </ul>
+        </section>
+        <section class="sub-section" id="Nonschema_Objects">
+            <header>Nonschema Objects</header>
+            <p>These types of objects are also stored in the database and can be created and manipulated with SQL but are not contained in a schema:</p>
+            <ul>
+                <li>Contexts</li>
+                <li>Directories</li>
+                <li>Parameter files and server parameter files</li>
+                <li>Profiles</li>
+                <li>Roles</li>
+                <li>Rollback segments</li>
+                <li>Tablespaces</li>
+                <li>Users</li>
+            </ul>
+        </section>
+    </section>
+
+    <section class="main-section" id="Schema_Object_Guidelines">
+        <header>Schema Object Guidelines</header>
+        <p>Some schema objects are made up of parts that you can or must name, such as the columns in a table or view, index and table partitions and subpartitions, integrity constraints on a table, and objects that are stored within a package, including procedures and stored functions.
+        <section class="sub-section" id="Schema_Object_Naming_Rules">
+            <header>Schema Object Naming Rules</header>
+            <p>Every database object has a name. In a SQL statement, you represent the name of an object with either a quoted or a nonquoted identifier.</p>
+            <ul>
+                <li>A quoted identifier begins and ends with double quotation marks (<code>"</code>). If you name a schema object using a quoted identifier, then you must use the double quotation marks whenever you refer to that object.</li>
+                <li>A nonquoted identifier is not surrounded by any punctuation.</li>
+            </ul>
+            <p>You can use either quoted or nonquoted identifiers to name any database object. However, database names, global database names, and database link names are always case insensitive and are stored as uppercase. If you specify such names as quoted identifiers, then the quotation marks are silently ignored.</p>
+            <p>The following list of rules applies to both quoted and nonquoted identifiers unless otherwise indicated:</p>
+            <ol>
+                <li>Names must be from 1 to 30 bytes long with these exceptions:</li>
+                <ul>
+                    <li>Names of databases are limited to 8 bytes.</li>
+                    <li>Names of database links can be as long as 128 bytes.</li>
+                </ul>
+                <p>If an identifier includes multiple parts separated by periods, then each attribute can be up to 30 bytes long. Each period separator, as well as any surrounding double quotation marks, counts as one byte.</p>
+                <li>Nonquoted identifiers cannot be Oracle Database reserved words. Quoted identifiers can be reserved words, although this is not recommended.</li>
+                <p>Names may be further restricted by other product-specific reserved words depending on the used Oracle product.</p>
+                <li>Do not reuse names that the Oracle SQL language uses as special cases. Although they are not reserved, Oracle uses them internally in specific ways. These include datatypes, schema names, function names, the dummy system table <code>DUAL</code>, and keywords (the uppercase words in SQL statements, such as <code>DIMENSION</code>, <code>SEGMENT</code>, <code>ALLOCATE</code>, <code>DISABLE</code>, and so forth). These words are not reserved. If you use these words as names for objects and object parts, then your SQL statements may be more difficult to read and may lead to unpredictable results.</li>
+                <li>It is strongly advised to use ASCII characters in database names, global database names, and database link names.</li>
+                <li>Nonquoted identifiers must begin with an alphabetic character from your database character set, while quoted identifiers can begin with any character.</li>
+                <li>Nonquoted identifiers can contain only alphanumeric characters from your database character set and the underscore (<code>_</code>), dollar sign (<code>$</code>), and pound sign (<code>#</code>). Database links can also contain periods (<code>.</code>) and "at" signs (<code>@</code>). It is strongly advised to not use <code>$</code> and <code>#</code> in nonquoted identifiers.</li>
+                <li>Within a namespace, no two objects can have the same name. Only certain schema and nonschema objects may share the same namespace.</li>
+                <li>Nonquoted identifiers are not case sensitive, as Oracle interprets them as uppercase. Only quoted identifiers are case sensitive.</li>
+                <li>Columns in the same table or view cannot have the same name; however, columns in different tables or views can have the same name.</li>
+                <li>Procedures or functions contained in the same package can have the same name, but only if their arguments are not of the same number and datatypes.</li>
+            </ol>
+        </section>
+        <section class="sub-section" id="Schema_Object_Naming_Examples">
+            <header>Schema Object Naming Examples</header>
+            <p>The following examples are valid schema object names:</p>
+            <code class="code-block">
+first_name
+rabbit
+hr.hire_time
+"EVEN THIS & THAT!"
+a_very_long_but_valid_name
+            </code>
+            <p>All of the examples above adhere to the rules listed in "Schema Object Naming Rules".</p>
+            <p>The example below is not valid because it exceeds 30 characters:</p>
+            <code class="code-block">
+a_very_very_long_but_not_valid_name
+            </code>
+        </section>
+        <section class="sub-section" id="Schema_Object_Naming_Guidelines">
+            <header>Schema Object Naming Guidelines</header>
+            <p>To assist in following proper naming conventions, here are helpful guidelines for naming objects and their parts:</p>
+            <ul>
+                <li>Use full, descriptive, pronounceable names (or well-known abbreviations).</li>
+                <li>Use consistent naming rules.</li>
+                <li>Use the same name to describe the same entity or attribute across tables.</li>
+            </ul>
+            <p>It is important to balance the objective of keeping names short and easy to use with the objective of making names as descriptive as possible. When in doubt, choose the more descriptive name, because the objects in the database may be used by many people over a period of time.</p>
+        </section>
+    </section>
+
+    <section class="main-section" id="Syntax_for_Schema_Objects">
+        <header>Syntax for Schema Objects</header>
+        <p>The diagram below illustrates the general syntax for referring to an object or a part in SQL:</p>
+        <img class="diagram" src="https://docs.oracle.com/cd/B19306_01/server.102/b14200/img/database_object_or_part.gif" alt="A flow chart where a long horizontal line, pointing east and spanning the floor of the diagram, branches off and points to an upper 'schema' bubble, which points to a upper '.' bubble, which points to an 'object' bubble along the horizontal line, which branches off and points to an upper '.' bubble, which points to an upper 'part' bubble, which points to the horizonal line, which branches off and points to an '@' bubble, which points to an upper 'dblink' bubble, which points to the horizontal line.">
+        <p>where:</p>
+        <ul>
+            <li><code><em>object</em></code> is the name of the object.</li>
+            <li><code><em>schema</em></code> is the schema containing the object. The schema qualifier lets you refer to an object in a schema other than your own. You must be granted privileges to refer to objects in other schemas.
+            <li><code><em>part</em></code> is a part of the object. This identifier lets you refer to a part of a schema object, such as a column or a partition of a table. Not all types of objects have parts.</li>
+            <li><code><em>dblink</em></code> applies only when you are using the Oracle Database distributed functionality. The dblink qualifier lets you refer to an object in a database other than your local database. Keep in mind that not all SQL statements allow you to access objects on remote databases.</li>
+        </ul>
+        <p>You can include spaces around the periods separating the components of the reference to the object, but it is conventional to omit them.</p>
+    </section>
+
+    <section class="main-section" id="References">
+        <header>References</header>
+        <p>All of the information above (and much more) can be found at the <a href="https://docs.oracle.com/en/database/" target="_blank">Oracle Database Documentation page.</a></p>
+    </section>
+</main>
+<!-- partial -->
+</body>
+</html>
