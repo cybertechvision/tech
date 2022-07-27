@@ -5,7 +5,6 @@ header {
   margin-left: 72px;
 }
 
-
 #sinv {
   line-height: 1;
   position: fixed;
@@ -18,7 +17,7 @@ header {
   overflow-y: auto;
 }
 
-body {  
+body {
   background-color: #000000;
   font-family: "Barlow Condensed", sans-serif;
   font-size: 20px;
@@ -62,9 +61,6 @@ p {
   font-family: "Barlow Condensed", sans-serif;
   line-height: 1.6;
 }
-
-
-
 
 .topnav {
   overflow: hidden;

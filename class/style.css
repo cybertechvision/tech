@@ -1,164 +1,164 @@
-@import url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif&display=swap");
 
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: box-border;
+  padding: 0;
+  margin: 0;
+  box-sizing: box-border;
 }
 
 body {
-    font-family: "PT Serif", Helvetica, sans-serif;
-    font-size: 1em;
-    line-height: 1.5;
+  font-family: "PT Serif", Helvetica, sans-serif;
+  font-size: 1em;
+  line-height: 1.5;
 }
 
 header {
-    font-size: 1.5em;
-    margin: 2vh 0;
+  font-size: 1.5em;
+  margin: 2vh 0;
 }
 
 #navbar header {
-    text-align: center;
-    margin-top: 1vh;
+  text-align: center;
+  margin-top: 1vh;
 }
 
 #navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-	overflow-x: hidden;
-    overflow-y: auto;
-    max-width: 30vw;
-    height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  max-width: 30vw;
+  height: 100vh;
 }
 
 #navbar ul {
-    list-style-type: none;
+  list-style-type: none;
 }
 
 .nav-link,
 .sub-link {
-    border-top: 0.1em solid #000;
-    float: right;
-    text-decoration: none;
-    color: #000;
-    width: 25vw;
-    padding: 1.565vh 1vw;
-	transition: background-color 0.3s ease-out;
+  border-top: 0.1em solid #000;
+  float: right;
+  text-decoration: none;
+  color: #000;
+  width: 25vw;
+  padding: 1.565vh 1vw;
+  transition: background-color 0.3s ease-out;
 }
 
 .sub-link {
-    border-left: 0.3em double;
-    font-size: 0.75em;
-    width: 23.5vw;
+  border-left: 0.3em double;
+  font-size: 0.75em;
+  width: 23.5vw;
 }
 
 main {
-    width: 65vw;
-    margin-left: 27.5vw;
+  width: 65vw;
+  margin-left: 27.5vw;
 }
 
 #title,
 .main-section,
 .sub-section,
 #reference {
-    border: 0.1em solid #000;
-    border-top: none;
-    width: 100%;
-    padding: 3vw;
+  border: 0.1em solid #000;
+  border-top: none;
+  width: 100%;
+  padding: 3vw;
 }
 
 .main-section,
 #reference {
-    background-color: whitesmoke;
+  background-color: whitesmoke;
 }
 
 #title {
-    border-width: 0.05em;
-    font-size: 2em;
+  border-width: 0.05em;
+  font-size: 2em;
 }
 
 .main-section p {
-    margin: 1vw 0;
+  margin: 1vw 0;
 }
 
 .main-section ul,
 .main-section ol {
-    margin: 2vw 2vw 2vw 5vw;
+  margin: 2vw 2vw 2vw 5vw;
 }
 
 .main-section ol li {
-    padding-left: 1vw;
-    margin: 1vw 0;
+  padding-left: 1vw;
+  margin: 1vw 0;
 }
 
 .sub-section {
-    border-top: 0.1em solid #000;
-    background-color: #EAEAEA;
-    width: 93%;
-    padding: 1vw 2vw;
-    margin: 2vw 0;
+  border-top: 0.1em solid #000;
+  background-color: #eaeaea;
+  width: 93%;
+  padding: 1vw 2vw;
+  margin: 2vw 0;
 }
 
 code {
-    border-radius: 5px;
-    background-color: #DFDFDF;
-    overflow: auto;
-    padding: 0.3vh 0.5vw;
+  border-radius: 5px;
+  background-color: #dfdfdf;
+  overflow: auto;
+  padding: 0.3vh 0.5vw;
 }
 
 .code-block {
-    display: block;
-    white-space: pre;
-    margin: 1.5vw 0;
-    padding: 0 3vw;
-	overflow: auto;
+  display: block;
+  white-space: pre;
+  margin: 1.5vw 0;
+  padding: 0 3vw;
+  overflow: auto;
 }
 
 .diagram {
-    width: 63.5vw;
-    height: auto;
-    margin: 1vw 0;
+  width: 63.5vw;
+  height: auto;
+  margin: 1vw 0;
 }
 
 .nav-link:hover,
 .sub-link:hover {
-    background-color: #EEEEEE;
+  background-color: #eeeeee;
 }
 
 @media (max-width: 700px) {
-    body {
-        font-size: 2vh;
-    }
+  body {
+    font-size: 2vh;
+  }
 
-    header {
-        font-size: 3vh;
-    }
+  header {
+    font-size: 3vh;
+  }
 
-    #navbar {
-        max-width: 29vw;
-    }
+  #navbar {
+    max-width: 29vw;
+  }
 
-    .nav-link,
-    .sub-link {
-        width: 25vw;
-    }
+  .nav-link,
+  .sub-link {
+    width: 25vw;
+  }
 
-    .sub-link {
-        font-size: 1.5vh;
-        width: 22.5vw;
-    }
+  .sub-link {
+    font-size: 1.5vh;
+    width: 22.5vw;
+  }
 
-    main {
-        width: 66.45vw;
-        margin-left: 28vw;
-    }
+  main {
+    width: 66.45vw;
+    margin-left: 28vw;
+  }
 
-    #title {
-        font-size: 3vh;
-    }
+  #title {
+    font-size: 3vh;
+  }
 
-    .sub-section header {
-        font-size: 2.5vh;
-    }
+  .sub-section header {
+    font-size: 2.5vh;
+  }
 }

@@ -1,72 +1,95 @@
 <!DOCTYPE html>
-<html lang="en" >
-<head>
-  <meta charset="UTF-8">
-  <title>Application Using Python Gui</title>
-  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'><link rel="stylesheet" href="./style/video.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
-<body>
-	<div class="topnav" id="myTopnav">
-		<a href="Onlineregister.html" class="active">Application Using Python Gui</a>
-		<a href="index.html">Home</a>
-		<a href="contact.html">Contact Us</a>
-		<a href="about.html">About</a>
-		<a href="javascript:void(0);" class="icon" onclick="myFunction()">
-		  <i class="fa fa-bars"></i>
-		</a>
-	  </div>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Application Using Python Gui</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="./style/video.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <div class="topnav" id="myTopnav">
+      <a href="Onlineregister.html" class="active"
+        >Application Using Python Gui</a
+      >
+      <a href="index.html">Home</a>
+      <a href="contact.html">Contact Us</a>
+      <a href="about.html">About</a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
 
+    <!-- partial:index.partial.html -->
+    <section class="video-block">
+      <div class="container">
+        <div class="row">
+          <div class="video-tab clearfix">
+            <div class="col-md-7 pr-0">
+              <div class="tab-content">
+                <div class="tab-pane active fade in" id="videoTab01">
+                  <a
+                    class="play-icon"
+                    data-video="https://player.vimeo.com/video/704310708?h=d2906b6282"
+                  >
+                    <img
+                      class="play-button"
+                      src="https://user-images.githubusercontent.com/16266381/60864229-d403b780-a244-11e9-909a-a8a01b6e1d50.png"
+                      alt="play-button"
+                    />
+                    <div class="post-thumbnail">
+                      <img
+                        class="img-responsive"
+                        src="./images/pythonexp.png"
+                        alt="post-thumbnail"
+                      />
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
 
-<!-- partial:index.partial.html -->
-<section class="video-block">
-	<div class="container">
-		<div class="row">
-			<div class="video-tab clearfix">
-				<div class="col-md-7 pr-0">
-					<div class="tab-content">
-						<div class="tab-pane active fade in" id="videoTab01">
-							<a class="play-icon" data-video="https://player.vimeo.com/video/704310708?h=d2906b6282">
-								<img class="play-button" src="https://user-images.githubusercontent.com/16266381/60864229-d403b780-a244-11e9-909a-a8a01b6e1d50.png" alt="play-button">
-								<div class="post-thumbnail">
-									<img class="img-responsive" src="./images/pythonexp.png" alt="post-thumbnail"/>
-								</div>
-							</a>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-md-5 pl-0">
-					<ul class="side side-tabs">
-						<li class="active">
-							<a href="#videoTab01" data-toggle="tab">
-								<div class="post-thumbnail">
-									<img class="img-responsive" src="./images/pythonexp.png" alt="post-thumbnail"/>
-								</div>
-								<h3>Application Using Python Gui Project Explanation Video </h3>
-							</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-<!-- partial -->
-<script>
-
-function myFunction() {
-		var x = document.getElementById("myTopnav");
-		if (x.className === "topnav") {
-		  x.className += " responsive";
-		} else {
-		  x.className = "topnav";
-		}
-	  }
-
-</script>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'></script><script  src="./script/video.js"></script>
-
-</body>
+            <div class="col-md-5 pl-0">
+              <ul class="side side-tabs">
+                <li class="active">
+                  <a href="#videoTab01" data-toggle="tab">
+                    <div class="post-thumbnail">
+                      <img
+                        class="img-responsive"
+                        src="./images/pythonexp.png"
+                        alt="post-thumbnail"
+                      />
+                    </div>
+                    <h3>
+                      Application Using Python Gui Project Explanation Video
+                    </h3>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- partial -->
+    <script>
+      function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+          x.className += " responsive";
+        } else {
+          x.className = "topnav";
+        }
+      }
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="./script/video.js"></script>
+  </body>
 </html>
