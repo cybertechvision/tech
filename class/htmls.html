@@ -1,72 +1,90 @@
 <!DOCTYPE html>
-<html lang="en" >
-<head>
-  <meta charset="UTF-8">
-  <title>HTML Documentation</title>
-  <link rel="stylesheet" href="./htmls.css">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>HTML Documentation</title>
+    <link rel="stylesheet" href="./htmls.css" />
+  </head>
+  <body>
+    <div class="topnav">
+      <a href="../index.html">Home</a>
+      <a href="../project.html">Project Class</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../about.html">About</a>
+    </div>
 
-</head>
-<body>
+    <!-- partial:index.partial.html -->
+    <html>
+      <div id="sinv">
+        <header><strong> Basics of HTML</strong></header>
+        <ul id="si-nv">
+          <li class="main-section"><a href="#HTML">What is HTML</a></li>
+          <li class="main-section"><a href="#structure">HTML tags</a></li>
+          <li class="main-section"><a href="#elements">HTML Elements</a></li>
+          <li class="main-section">
+            <a href="#basics">Basics of HTML documentation</a>
+          </li>
+          <li class="main-section">
+            <a href="#attributes">HTML Attributes</a>
+          </li>
+          <li class="main-section">
+            <a href="#courses">Online Self-taught coding courses</a>
+          </li>
+          <li class="main-section"><a href="#extras">Extra Resources</a></li>
+        </ul>
+      </div>
 
-  <div class="topnav">
-    <a href="../index.html">Home</a>
-    <a href="../project.html">Project Class</a>
-    <a href="../contact.html">Contact</a>
-    <a href="../about.html">About</a>
-  </div>
+      <body>
+        <h1 id="HTML">What is HTML?</h1>
+        <p>HTML is the standard markup language for creating Web pages.</p>
+        <ul class="details">
+          <li>HTML stands for Hyper Text Markup Language</li>
+          <li>HTML describes the structure of a Web page</li>
+          <li>HTML consists of a series of elements</li>
+          <li>HTML elements tell the browser how to display the content</li>
+          <li>HTML elements are represented by tags</li>
+          <li>
+            HTML tags label pieces of content such as "heading", "paragraph",
+            "table", and so on
+          </li>
+          <li>
+            Browsers do not display the HTML tags, but use them to render the
+            content of the page
+          </li>
+        </ul>
 
-<!-- partial:index.partial.html -->
-<html>
-<div id="sinv">
-  <header><strong> Basics of HTML</strong></header>
-  <ul id="si-nv">
-    <li class="main-section"><a href="#HTML">What is HTML</a></li>
-    <li class="main-section"><a href="#structure">HTML tags</a></li>
-    <li class="main-section"><a href="#elements">HTML Elements</a></li>
-    <li class="main-section"><a href="#basics">Basics of HTML documentation</a></li>
-    <li class="main-section"><a href="#attributes">HTML Attributes</a></li>
-    <li class="main-section"><a href="#courses">Online Self-taught coding courses</a></li>
-    <li class="main-section"><a href="#extras">Extra Resources</a></li>
-  </ul>
-</div>
-
-<body>
-  <h1 id="HTML">What is HTML?</h1>
-  <p>HTML is the standard markup language for creating Web pages.</p>
-  <ul class="details">
-    <li>HTML stands for Hyper Text Markup Language</li>
-    <li>HTML describes the structure of a Web page</li>
-    <li>HTML consists of a series of elements</li>
-    <li>HTML elements tell the browser how to display the content</li>
-    <li>HTML elements are represented by tags</li>
-    <li>HTML tags label pieces of content such as "heading", "paragraph", "table", and so on</li>
-    <li>Browsers do not display the HTML tags, but use them to render the content of the page</li>
-  </ul>
-
-  <h1 id="structure">HTML tags</h1>
-  <p> HTML structure = Opening Tags + Closing Tags </p>
-  <p><code>
-      <xmp>
+        <h1 id="structure">HTML tags</h1>
+        <p>HTML structure = Opening Tags + Closing Tags</p>
+        <p>
+          <code>
+            <xmp>
         <html>
         ....
 
         </html>
       </xmp>
-    </code></p>
-  <p><strong>Click <a href="https://www.w3schools.com/tags/default.asp">here</a> to see the HTML tag list ordered alphabetically.</strong></p>
+          </code>
+        </p>
+        <p>
+          <strong
+            >Click
+            <a href="https://www.w3schools.com/tags/default.asp">here</a> to see
+            the HTML tag list ordered alphabetically.</strong
+          >
+        </p>
 
-  <h1 id="elements">HTML elements</h1>
-  <p>The HTML element is everything from the start tag to the end tag:</p>
-  <code>
-    <xmp>
+        <h1 id="elements">HTML elements</h1>
+        <p>The HTML element is everything from the start tag to the end tag:</p>
+        <code>
+          <xmp>
       <p>My first paragraph.</p>
     </xmp>
-  </code>
+        </code>
 
-  <h1 id="basics">Basics of HTML documentation</h1>
-  <p> An example HTML documentation will look like:</p>
-  <code>
-    <xmp>
+        <h1 id="basics">Basics of HTML documentation</h1>
+        <p>An example HTML documentation will look like:</p>
+        <code>
+          <xmp>
       <!DOCTYPE html>
       <html>
 
@@ -83,51 +101,131 @@
 
       </html>
     </xmp>
-  </code>
-  <p> Example breakdown: </p>
-  <ul>
-    <li><strong style="color: #ff0000">/DOCTYPE html/</strong> defines this document to be HTML5</li>
-    <li><strong style="color: #ff0000">html</strong> represents the root element of an HTML page</li>
-    <li><strong style="color: #ff0000">/head/</strong> contains meta information about the document</li>
-    <li><strong style="color: #ff0000">/title/</strong> specifies the title for the document</li>
-    <li><strong style="color: #ff0000">/body/</strong> contains the visible page content</li>
-    <li><strong style="color: #ff0000">/h1/</strong> defines a large heading</li>
-    <li><strong style="color: #ff0000">/p/</strong> defines a paragraph</li>
-  </ul>
-  <h1 id="attributes">HTML Attributes</h1>
-  <p>An HTML attribute provides additional information about an HTML element.</p>
-  <code>
-    <xmp>
+        </code>
+        <p>Example breakdown:</p>
+        <ul>
+          <li>
+            <strong style="color: #ff0000">/DOCTYPE html/</strong> defines this
+            document to be HTML5
+          </li>
+          <li>
+            <strong style="color: #ff0000">html</strong> represents the root
+            element of an HTML page
+          </li>
+          <li>
+            <strong style="color: #ff0000">/head/</strong> contains meta
+            information about the document
+          </li>
+          <li>
+            <strong style="color: #ff0000">/title/</strong> specifies the title
+            for the document
+          </li>
+          <li>
+            <strong style="color: #ff0000">/body/</strong> contains the visible
+            page content
+          </li>
+          <li>
+            <strong style="color: #ff0000">/h1/</strong> defines a large heading
+          </li>
+          <li>
+            <strong style="color: #ff0000">/p/</strong> defines a paragraph
+          </li>
+        </ul>
+        <h1 id="attributes">HTML Attributes</h1>
+        <p>
+          An HTML attribute provides additional information about an HTML
+          element.
+        </p>
+        <code>
+          <xmp>
       <a href="https://www.freecodecamp.com">This is a link</a>
     </xmp>
-  </code>
-  <p>The example above show the coding for HTML links were defined by the tag<strong style="color:#ff0000"> /a/</strong> and the link address is specified by the<strong style="color:#ff0000"> /href/ </strong>attribute.</p>
-  <p><strong>Click <a href="https://www.w3schools.com/tags/ref_attributes.asp">here</a> to see the HTML attribute reference list.</strong></p>
+        </code>
+        <p>
+          The example above show the coding for HTML links were defined by the
+          tag<strong style="color: #ff0000"> /a/</strong> and the link address
+          is specified by the<strong style="color: #ff0000"> /href/ </strong
+          >attribute.
+        </p>
+        <p>
+          <strong
+            >Click
+            <a href="https://www.w3schools.com/tags/ref_attributes.asp">here</a>
+            to see the HTML attribute reference list.</strong
+          >
+        </p>
 
-  <h1 id="courses">Online Self-taught coding courses</h1>
-  <p> There're plenty of online coding courses available at the moment, making it bit challenging to see which ones suit your learning pace and your coding knowledge.<br>
-    For a total newbee to the coding world like me, I'd recommend you to start off your coding journey with 2 FREE-OF-CHARGE coding websites below:</p>
-  <ol>
-    <li><strong style="color: #ff0000">https://www.w3schools.com/</strong></li>
-    <p>This is the most comprehensive coding site i have ever encountered. This site will offer you insights into coding areas namely HTML, CSS, Javascript, SQL, Python and so much more.<br>
-      The site also provides you coding exercises, tips as well as reference lists so you can put your learning knowledge into use and get practiced with coding :) </p>
-    <li><strong style="color: #ff0000">https://www.freecodecamp.org/</strong></li>
-    <p>Similar to the other site, "freecodecamp" coding site provides you essential understandings about coding areas. The main selling point of this site is that it "challenges" you with mini coding projects at the end of each coding chapter.</p>
-    <p>I like the idea of completing mini coding projects in the way to build my own coding porfolio and share them with my friends after completing them. What's more, they help me gain extra knowledge as well as useful tips of coding.</p>
-    <p>Though it's a bit intimidating at the beginning at the projects, it motivates you to go forwards and try your best to solve the coding puzzles</p>
-  </ol>
-  <h1 id="extras">Extra Resources</h1>
-  <p> Here are some useful online learning and practing coding sites to facilitate your coding journey.</p>
-  <p>Happy Coding😉</p>
-  <ul>
-    <li><strong style="color: #ff0000">https://codepen.io/</strong>: coding practice website where you can do all of your coding projects.</li>
-    <li><strong style="color: #ff0000">https://grasshopper.app/</strong>: coding app for beginners with animated backgrounds which stops you from getting bored of coding :)</li>
-    <li><strong style="color: #ff0000">https://studio.code.org/courses</strong>: free coding learning website for all ages. It's a perfect place for children to learn coding through kid-friendly coding courses such as making your own dance video games or building your own mobile games, and so much more!</li>
-  </ul>
-</body>
-
-</html>
-<!-- partial -->
-
-</body>
+        <h1 id="courses">Online Self-taught coding courses</h1>
+        <p>
+          There're plenty of online coding courses available at the moment,
+          making it bit challenging to see which ones suit your learning pace
+          and your coding knowledge.<br />
+          For a total newbee to the coding world like me, I'd recommend you to
+          start off your coding journey with 2 FREE-OF-CHARGE coding websites
+          below:
+        </p>
+        <ol>
+          <li>
+            <strong style="color: #ff0000">https://www.w3schools.com/</strong>
+          </li>
+          <p>
+            This is the most comprehensive coding site i have ever encountered.
+            This site will offer you insights into coding areas namely HTML,
+            CSS, Javascript, SQL, Python and so much more.<br />
+            The site also provides you coding exercises, tips as well as
+            reference lists so you can put your learning knowledge into use and
+            get practiced with coding :)
+          </p>
+          <li>
+            <strong style="color: #ff0000"
+              >https://www.freecodecamp.org/</strong
+            >
+          </li>
+          <p>
+            Similar to the other site, "freecodecamp" coding site provides you
+            essential understandings about coding areas. The main selling point
+            of this site is that it "challenges" you with mini coding projects
+            at the end of each coding chapter.
+          </p>
+          <p>
+            I like the idea of completing mini coding projects in the way to
+            build my own coding porfolio and share them with my friends after
+            completing them. What's more, they help me gain extra knowledge as
+            well as useful tips of coding.
+          </p>
+          <p>
+            Though it's a bit intimidating at the beginning at the projects, it
+            motivates you to go forwards and try your best to solve the coding
+            puzzles
+          </p>
+        </ol>
+        <h1 id="extras">Extra Resources</h1>
+        <p>
+          Here are some useful online learning and practing coding sites to
+          facilitate your coding journey.
+        </p>
+        <p>Happy Coding😉</p>
+        <ul>
+          <li>
+            <strong style="color: #ff0000">https://codepen.io/</strong>: coding
+            practice website where you can do all of your coding projects.
+          </li>
+          <li>
+            <strong style="color: #ff0000">https://grasshopper.app/</strong>:
+            coding app for beginners with animated backgrounds which stops you
+            from getting bored of coding :)
+          </li>
+          <li>
+            <strong style="color: #ff0000"
+              >https://studio.code.org/courses</strong
+            >: free coding learning website for all ages. It's a perfect place
+            for children to learn coding through kid-friendly coding courses
+            such as making your own dance video games or building your own
+            mobile games, and so much more!
+          </li>
+        </ul>
+      </body>
+    </html>
+    <!-- partial -->
+  </body>
 </html>
